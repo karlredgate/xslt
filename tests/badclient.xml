@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: badclient.xml 31785 2009-03-11 18:49:18Z kredgate $ --><storbitz xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="host.xsd">
+  <class>CLIENT</class>
+  <uri>http://yum.redgates.com/rhel/linux/core/4AS/i386/os/</uri>
+  <nodes>
+    <node />
+    <node>
+      <action>grub</action>
+      <pxe>
+        <kernel>vmlinuz-as4u2</kernel>
+        <initrd>initrd-as4u2.img</initrd>
+      </pxe>
+      <interfaces>
+        <interface>
+          <mac>00:15:c5:e1:e6:be</mac>
+          <ip>134.111.24.161</ip>
+          <dns>
+            <name>client1</name>
+          </dns>
+        </interface>
+      </interfaces>
+    </node>
+  </nodes>
+</storbitz>

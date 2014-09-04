@@ -1,0 +1,10 @@
+<?xml version='1.0' ?>
+<test>
+    <address>ff02::1</address>
+    <address>3d00:feed:face:24:cafe:babe:dead:beef</address>
+    <address>3d00:feed:face:24::dead:beef</address>
+    <address>fe80::204:babe:dead:beef</address>
+    <address>fe80::204:babe:dead:3</address>
+    <address>fe80::204:babe::dead:3</address>
+    <address>fe80:::204:babe:dead:3</address>
+</test>

@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!-- $Id: cip_mismatch.xml 31819 2009-03-12 15:28:09Z kredgate $ --><storbitz xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="host.xsd">
+<!-- cluster IP in node element does not match cluster ip in boot command line -->
+  <classes>
+    <class>cluster</class>
+    <class>dell_t300</class>
+    <class>hvm</class>
+    <class>sn</class>
+    <class>multiNic</class>
+  </classes>
+  <type>DUT::Cluster::Cfg</type>
+  <class>CLUSTERDUT</class>
+  <uri> http://yum.redgates.com/centos/4.4-i386</uri>
+  <kickstart>file:ks.cfg</kickstart>
+  <nodes>
+    <node>
+      <interfaces>
+        <interface>
+          <content>eth0:0</content>
+          <mac>00:00:6c:53:00:00</mac>
+          <ip>10.82.30.20</ip>
+          <dns>
+            <name>ellis</name>
+          </dns>
+        </interface>
+      </interfaces>
+    </node>
+    <node>
+      <action>grub</action>
+      <pxe>
+        <kernel>vmlinuz-centos5</kernel>
+        <initrd>node0.ellis-initrd.img</initrd>
+        <args>avance_wipe=1 gw=10.82.0.1 dns=10.82.1.5 ip=10.82.10.100/16 name=ellis.redgates.com noipv6 console=ttyS0,115200 recover nodmraid nousbstorage</args>
+      </pxe>
+      <serial>
+        <host>portserver3</host>
+        <port>8</port>
+        <baud>115200</baud>
+      </serial>
+      <power>
+        <host>tapc18</host>
+        <outlets>
+          <outlet>5</outlet>
+          <outlet>6</outlet>
+        </outlets>
+      </power>
+      <interfaces>
+        <interface>
+          <mac>00:1e:4f:31:8c:7b</mac>
+          <ip>10.82.10.101</ip>
+          <dns>
+            <name>node0.ellis</name>
+          </dns>
+        </interface>
+      </interfaces>
+    </node>
+    <node>
+      <action>grub</action>
+      <pxe>
+        <kernel>vmlinuz-centos5</kernel>
+        <initrd>node1.ellis-initrd.img</initrd>
+        <args>avance_wipe=1 gw=10.82.0.1 dns=10.82.1.5 ip=10.82.10.100/16 name=ellis.redgates.com noipv6 console=ttyS0,115200 install nodmraid nousbstorage</args>
+      </pxe>
+      <serial>
+        <host>portserver3</host>
+        <port>9</port>
+        <baud>115200</baud>
+      </serial>
+      <power>
+        <host>tapc18</host>
+        <outlets>
+          <outlet>7</outlet>
+          <outlet>8</outlet>
+        </outlets>
+      </power>
+      <interfaces>
+        <interface>
+          <mac>00:1e:4f:31:7f:97</mac>
+          <ip>10.82.10.102</ip>
+          <dns>
+            <name>node1.ellis</name>
+          </dns>
+        </interface>
+      </interfaces>
+    </node>
+  </nodes>
+  <vms>
+    <expand total="16">
+      <interfaces>
+        <interface>
+          <mac>00:04:fc:40:85:00</mac>
+          <ip>10.82.10.10</ip>
+          <dns>
+            <name>ellis</name>
+          </dns>
+        </interface>
+        <interface>
+          <!-- how is this address chosen??? -->
+          <!-- Map the same set of IP addresses to the MAC address range for the alternate cluster IP address -->
+          <mac>00:04:fc:40:89:c0</mac>
+          <ip>10.82.10.10</ip>
+        </interface>
+      </interfaces>
+    </expand>
+  </vms>
+</storbitz>
