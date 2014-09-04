@@ -1,0 +1,38 @@
+#!/bin/bash
+#
+#
+#
+
+export HARNESS=$HOME/lib/harness
+config=/tmp/change$$
+
+function cleanup {
+    echo cleanup
+    rm -f $TRANSACTION
+    rm -rf $config
+}
+
+function die {
+    cleanup
+    exit 1
+}
+
+[ -z "$1" ] && {
+    echo "usage: change DUT"
+    exit 1
+}
+DUT=$1
+
+mkdir $config
+TRANSACTION=transition$$
+trap die TERM INT HUP
+cp $HARNESS/domainaction.pb $config
+
+xsltproc $HARNESS/nodes.xslt http://$DUT:8999/nodes/ > $config/nodes.pb 
+xsltproc $HARNESS/domains.xslt http://$DUT:8999/domains/ > $config/domains.pb 
+dada -DDUT=\"$DUT\" $config/domainaction.pb  > $TRANSACTION
+bash $TRANSACTION | tee -a change.log
+# cleanup
+exit 0
+
+# vim:autoindent

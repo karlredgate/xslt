@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# attempt to hang spine
+#
+# send a change request to the DUT unless there are no domains that
+# can be changed -- then sleep for a sec until one can be changed
+#
+# at the same time have a constant topology request going against the DUT
+#
+
+DUT=$1
+[ X$DUT = X ] && {
+    echo "usage: $0 dutname"
+    exit 1
+}
+
+while true
+do
+    change $DUT
+done

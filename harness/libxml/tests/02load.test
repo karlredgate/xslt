@@ -1,0 +1,29 @@
+#!/usr/bin/ruby
+
+$INSTALL = '/usr/lib/spine'
+$:.unshift($INSTALL)
+
+puts "GC was #{GC.enable ? 'disabled' : 'enabled'}"
+require 'libxml'
+
+start_rss = IO.read("/proc/self/statm").split[1].to_i * 4
+
+f = File.open("jj.xml")
+d = LibXML::XML::Document.io(f)
+f.close
+f = nil
+d = nil
+
+stop_rss = IO.read("/proc/self/statm").split[1].to_i * 4
+delta = stop_rss - start_rss
+puts "leaked #{delta} KB"
+
+GC.start
+Thread.pass
+sleep 2
+
+stop_rss = IO.read("/proc/self/statm").split[1].to_i * 4
+delta = stop_rss - start_rss
+puts "leaked #{delta} KB"
+
+load 'inspect'

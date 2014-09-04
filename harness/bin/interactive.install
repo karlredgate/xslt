@@ -1,0 +1,306 @@
+#!/usr/bin/expect
+#
+# expect script that tests interacive install.
+#
+# spawn a telnet to the console service of a DUT and connect to
+# the MUX service of that domain, and answer all of the questions.
+#
+# Eventually this needs to randomize some of the request/response
+# bits.
+#
+
+set DUT [lindex $argv 0]
+set uuid [lindex $argv 1]
+puts "installing $uuid on $DUT"
+
+# spawn telnet to cluster
+spawn telnet $DUT 1
+
+# send uuid\n
+send "$uuid\n"
+
+# expect "Welcome to Red Hat Enterprise Linux"
+# expect "Choose a Language"
+set timeout 30
+expect {
+
+    "hat language would you like" {
+        expect "between elements"
+        send "\t"
+        after 1000
+        send "\r"
+        exp_continue
+    }
+
+    "configuration for this machine" {
+        after 400
+        send "\t"
+        after 1000
+        send "\r"
+        exp_continue
+    }
+
+    "Welcome to Red Hat Enterprise Linux AS" {
+        expect " OK "
+        send "\r"
+    }
+
+    timeout {
+        send "\036\014"
+        exp_continue
+    }
+}
+
+expect {
+    "Autopartition" {
+        send "\r"
+        exp_continue
+    }
+
+    "erasing ALL DATA" {
+        expect "Yes"
+        send "\r"
+        exp_continue
+    }
+
+    "emove all partitions on this system" {
+        expect "OK"
+        send "\t"
+        after 500
+        send "\t"
+        after 500
+        send "\r"
+        exp_continue
+    }
+
+    "you sure you want to do this" {
+        send "\t"
+        after 500
+        send "\r"
+    }
+
+}
+
+expect {
+
+    -re "Partition.*RAID" {
+        send "\t"
+        after 300
+        send "\t"
+        after 300
+        send "\t"
+        after 300
+        send "\t"
+        after 300
+        send "\t"
+        after 300
+        send "\r"
+    }
+
+}
+
+expect {
+    "boot loader would you like to use" {
+        expect OK
+        send "\t"
+        after 500
+        send "\t"
+        after 500
+        send "\r"
+    }
+}
+
+expect {
+    "pass boot options to the kernel" {
+        send "\t"
+        after 500
+        send "\t"
+        after 500
+        send "\r"
+    }
+}
+
+expect {
+    "boot loader password prevents" {
+        send "\t"
+        after 500
+        send "\r"
+    }
+}
+
+expect {
+    "other operating systems as well" {
+        expect "selects button"
+        send "\t"
+        after 500
+        send "\r"
+    }
+}
+
+expect {
+    "here do you want to install the boot loader" {
+        expect OK
+        send "\t"
+        after 500
+        send "\r"
+    }
+}
+
+expect {
+    "Configure using DHCP" {
+        send "\t"
+        after 500
+        send "\t"
+        after 1000
+        send "\r"
+    }
+}
+
+expect {
+    "enter in a hostname for your system" {
+        expect OK
+        send "\t"
+        after 500
+        send "\t"
+        after 1000
+        send "\r"
+    }
+}
+
+expect {
+    "firewall can help prevent" {
+        expect OK
+        after 500
+        send "\r"
+    }
+}
+
+expect {
+    "Security Enhanced Linux" {
+        expect OK
+        after 300
+        send " "
+        after 300
+        send "\t"
+        after 300
+        send "\t"
+        after 300
+        send "\t"
+        after 300
+        send "\r"
+    }
+}
+
+expect {
+    "hoose additional languages" {
+        expect OK
+        after 200
+        send "\t"
+        after 300
+        send "\r"
+    }
+}
+
+expect {
+    "hat time zone are you located" {
+        expect OK
+        after 200
+        send "\t"
+        after 200
+        send "\t"
+        after 300
+        send "\r"
+    }
+}
+
+expect {
+    "ick a root password" {
+        expect OK
+        after 200
+        send "BocceBal\t"
+        after 200
+        send "BocceBal\t"
+        after 300
+        send "\r"
+    }
+}
+
+expect {
+    "eading package information" {
+        after 300
+    }
+}
+
+expect {
+    "selection of software installed" {
+        expect OK
+        after 200
+        send "\t"
+        after 300
+        send "\r"
+    }
+}
+
+expect {
+    "complete log of your installation" {
+        expect OK
+        after 500
+        send "\r"
+    }
+}
+
+set timeout 360
+expect {
+    "emove any installation media" {
+        expect Reboot
+        after 500
+        send "\r"
+    }
+    -re "...." {
+        exp_continue
+    }
+}
+
+expect {
+    "Restarting system" {
+        after 500
+    }
+    -re "...." {
+        exp_continue
+    }
+}
+
+expect {
+    ":console> " {
+        after 2000
+        send "boot\r"
+        exp_continue
+    }
+    "request accepted" {
+        after 500
+    }
+}
+
+expect {
+    " login: " {
+        after 500
+    }
+    "Select the item that you" {
+        after 500
+        send "\t"
+        after 500
+        send "\t"
+        after 500
+        send "\r"
+        exp_continue
+    }
+    -re "...." {
+        exp_continue
+    }
+}
+
+# exec reset
+# exec clear
+puts "===== STOP ====="
+# vim:autoindent
+# vim:expandtab

@@ -1,0 +1,43 @@
+#!/bin/bash
+#
+# TODO:
+# check how long it took from the last request
+#
+
+DUT=$1
+[ X$DUT = X ] && {
+    echo "usage: $0 dutname"
+    exit 1
+}
+XML=/tmp/barrage$$.xml
+LOG=$DUT$$.log
+
+now=$(date +%s.%N)
+now_sec=$(date +%s)
+while true
+do
+    code=$(curl --include --remote-time --output $XML --time-cond $XML --silent --connect-timeout 1 --write-out "%{http_code}" http://$DUT:8999/topology.xml)
+    # cat $XML
+    # Need to check 200/304 ...
+
+    previous=$now
+    prev_sec=$now_sec
+    now=$(date +%s.%N)
+    now_sec=$(date +%s)
+
+    delta=$(dc -e "$now $previous - f")
+    delta_sec=$(( $now_sec - $prev_sec ))
+    [ $delta_sec -gt 1 ] && {
+	echo 
+        echo " ==> $(date) <== ($code) Delta is $delta ns"
+        echo " ==> $(date) <== ($code) Delta is $delta ns" >> $LOG
+    } || {
+        case $code in
+        200) echo -n "#" 2>&1 ;;
+        304) echo -n . 2>&1 ;;
+        *) echo -n X 2>&1 ;;
+        esac
+    }
+done
+
+# vim:autoindent

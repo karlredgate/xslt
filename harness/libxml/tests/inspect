@@ -1,0 +1,9 @@
+
+begin
+    f = File.open('objects.dump', 'w')
+    ObjectSpace.each_object { |o|
+        v = o.inspect rescue "UNKNOWN"
+        f.puts "#{o.class} => #{v}"
+    }
+    f.close
+end

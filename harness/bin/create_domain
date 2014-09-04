@@ -1,0 +1,120 @@
+#!/bin/bash
+#
+# Create a domain on a DUT.
+#
+
+HARNESS=$HOME/lib/harness
+
+[ -z "$1" ] && {
+    echo "usage: change DUT"
+    exit 1
+}
+DUT=$1
+
+# pick VM name
+function pick_name {
+    echo vm$$
+}
+domain_name=${2:-$(pick_name)}
+echo "Create domain \"$domain_name\" on $DUT"
+
+config=/tmp/config$$
+mkdir $config
+
+# get node info
+echo Get node information
+xsltproc $HARNESS/nodes.xslt http://${DUT}:8999/nodes/ > $config/nodes.pb
+
+# get storage info
+echo Get storage information
+xsltproc $HARNESS/storage.xslt http://${DUT}:8999/storage/ > $config/storage.pb
+
+# generate carve request
+cp $HARNESS/carve.pb $config
+cp $HARNESS/carve_ready.xslt $config
+cp $HARNESS/volume_uuid.xslt $config
+echo Carve a boot volume for $domain_name
+dada -DDOMAIN_NAME=\"$domain_name\" $config/carve.pb  > $config/carve.sh
+( cd $config ; bash carve.sh )
+volume=$(dada $config/volumes.pb)
+echo Created volume $volume
+
+# check response
+
+#
+# generate domain create request
+#
+echo Create $domain_name on $DUT
+cp $HARNESS/create_domain.pb $config
+cp $HARNESS/domain_uuid.xslt $config
+dada -DDOMAIN_NAME=\"$domain_name\" -DDUT=\"$DUT\" $config/create_domain.pb > $config/create_domain.sh
+( cd $config ; bash create_domain.sh ) || {
+    echo Failed to create domain
+    exit 1
+}
+domain_uuid=$(dada $config/domain_uuid.pb)
+echo Created domain $domain_uuid
+
+#
+# Look up the UUID of the RHEL repo
+#
+echo Looking up the RHEL repo
+XSLT=$config/temp$$.xslt
+cat > $XSLT <<EOF
+<?xml version='1.0' ?>
+<xsl:stylesheet xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
+                xmlns:fn='http://www.w3.org/2005/02/xpath-functions'
+                xmlns:xsd='http://www.w3.org/2001/XSL/XMLSchema'
+                xmlns:xsi='http://www.w3.org/2001/XSL/XMLSchema-instance'
+                version='1.0'>
+
+<xsl:template match='/repository'>
+      <xsl:value-of select='@id' />
+</xsl:template>
+<xsl:output method="text"/>
+</xsl:stylesheet>
+EOF
+repo_uuid=$(xsltproc $XSLT "http://${DUT}:8999/repositories/name/Red%20Hat%20Enterprise%20Linux%20AS%20release%204%20(Nahant%20Update%204)")
+echo "RHEL repo is $repo_uuid"
+
+#
+# Look up the UUID of the interactive template
+#
+echo Looking up the interactive template id
+cat > $XSLT <<EOF
+<?xml version='1.0' ?>
+<xsl:stylesheet xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
+                xmlns:fn='http://www.w3.org/2005/02/xpath-functions'
+                xmlns:xsd='http://www.w3.org/2001/XSL/XMLSchema'
+                xmlns:xsi='http://www.w3.org/2001/XSL/XMLSchema-instance'
+                version='1.0'>
+
+<xsl:output method="text"/>
+<xsl:template match='/templates/template[repository/@ref="$repo_uuid" and name="interactive"]'>
+      <xsl:value-of select='@id' />
+</xsl:template>
+<xsl:template match='template'></xsl:template>
+</xsl:stylesheet>
+EOF
+template_uuid=$(xsltproc $XSLT http://${DUT}:8999/templates/)
+echo "template is $template_uuid"
+sleep 5
+
+# load domain
+echo Load $domain_name on $DUT with $template_uuid
+cp $HARNESS/load_domain.pb $config
+dada -DDOMAIN_NAME=\"$domain_name\" -DTEMPLATE_UUID=\"$template_uuid\" -DDUT=\"$DUT\" $config/load_domain.pb > $config/load_domain.sh
+( cd $config ; bash load_domain.sh ) || {
+    echo Failed to load domain
+    exit 1
+}
+
+sleep 2
+interactive.install $DUT $domain_uuid
+
+# check domain is up
+rm -rf $config
+reset
+clear
+
+exit 0

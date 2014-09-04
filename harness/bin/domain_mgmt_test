@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# Just change a VMs state on a DUT in a loop.  If a change fails
+# exit the loop.
+#
+
+DUT=$1
+[ X$DUT = X ] && {
+    echo "usage: $0 dutname"
+    exit 1
+}
+
+while true
+do
+    change $DUT || {
+	echo "Change for $DUT failed"
+        exit 1
+    }
+done
+
+# vim:autoindent

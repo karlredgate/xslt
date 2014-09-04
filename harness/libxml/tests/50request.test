@@ -1,0 +1,18 @@
+#!/usr/bin/ruby
+
+$INSTALL = '/usr/lib/spine'
+$:.unshift($INSTALL)
+
+puts "GC was #{GC.enable ? 'disabled' : 'enabled'}"
+require 'xml/rpc'
+
+start_rss = IO.read("/proc/self/statm").split[1].to_i * 4
+
+Xen.domain.list
+
+stop_rss = IO.read("/proc/self/statm").split[1].to_i * 4
+delta = stop_rss - start_rss
+puts "leaked #{delta} KB"
+
+load 'inspect'
+

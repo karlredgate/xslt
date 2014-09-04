@@ -1,0 +1,29 @@
+#!/usr/bin/ruby
+
+$INSTALL = '/usr/lib/spine'
+$:.unshift($INSTALL)
+
+require 'xml/rpc/client'
+
+start_rss = IO.read("/proc/self/statm").split[1].to_i * 4
+
+f = File.open("jj.xml")
+obj = XML::RPC::Data.new(f)
+data = obj._unpack_
+data2 = data.clone
+data = nil
+obj = nil
+f.close
+
+stop_rss = IO.read("/proc/self/statm").split[1].to_i * 4
+delta = stop_rss - start_rss
+puts "leaked #{delta} KB"
+
+GC.start
+sleep 2
+
+stop_rss = IO.read("/proc/self/statm").split[1].to_i * 4
+delta = stop_rss - start_rss
+puts "leaked #{delta} KB"
+
+load 'inspect'
