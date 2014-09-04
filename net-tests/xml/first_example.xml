@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/style/spine.xsl"?><cluster id="53838a43-2096-46e5-8389-219363534c05">
+  <name>bentley.sn.stratus.com</name>
+  <address family="ipv4" prefix="16">10.83.60.17</address>
+  <netmask>255.255.0.0</netmask>
+  <broadcast>10.83.255.255</broadcast>
+  <gateway family="ipv4">10.83.0.1</gateway>
+  <dns_servers>
+    <dns_server>134.111.24.254</dns_server>
+  </dns_servers>
+  <version>562954248388608</version>
+  <kits>
+    <kit id="269f4bda-5224-4e23-9ec8-883681744ada">
+      <state>ready</state>
+      <product>
+        <short_desc>Stratus Avance Server</short_desc>
+        <version>
+          <name>R2.0.1 (svn:knr)</name>
+          <number>562954248388608</number>
+          <major>2</major>
+          <minor>0</minor>
+          <maint>1</maint>
+          <patch>0</patch>
+        </version>
+      </product>
+      <upgrade>
+        <from>
+          <major>1</major>
+          <minor>5</minor>
+          <maint>0</maint>
+        </from>
+        <from>
+          <major>1</major>
+          <minor>6</minor>
+          <maint>0</maint>
+        </from>
+        <from>
+          <major>2</major>
+          <minor>0</minor>
+          <maint>0</maint>
+          <patch>2</patch>
+        </from>
+        <from>
+          <major>2</major>
+          <minor>0</minor>
+          <maint>1</maint>
+        </from>
+        <from>
+          <major>2</major>
+          <minor>1</minor>
+          <maint>0</maint>
+        </from>
+        <exclude>
+          <major>1</major>
+          <minor>5</minor>
+          <maint>2</maint>
+          <patch>1</patch>
+        </exclude>
+      </upgrade>
+    </kit>
+  </kits>
+  <lans>
+    <lan id="9308fb0e-a569-42be-9164-6a4d8992318f">
+      <address>169.154.0.0/16</address>
+    </lan>
+    <lan id="011b64aa-173d-44bf-b34b-9ff790f54a27">
+      <address>10.83.0.0/16</address>
+      <router>10.83.0.1</router>
+    </lan>
+    <lan id="0d4328a5-9d6e-40c9-8418-8c19d360c58e">
+      <address>134.111.24.0/21</address>
+    </lan>
+    <lan id="d0a9343f-1a74-434b-9754-1c9f6ff9053c">
+    </lan>
+  </lans>
+  <systems>
+    <system id="7ff20789-7bcb-4a34-808b-7fa1c2d4f0b2" primary="true">
+      <name>node0</name>
+      <cluster ref="53838a43-2096-46e5-8389-219363534c05"/>
+      <state>running</state>
+      <pwrstate>running</pwrstate>
+      <membership>full</membership>
+      <kit ref="269f4bda-5224-4e23-9ec8-883681744ada"/>
+      <manufacturer/>
+      <model supported="true"/>
+      <serial/>
+      <bios>
+        <nx/>
+        <vmx/>
+        <bootseq good="true"/>
+      </bios>
+      <boot_time>1279135446</boot_time>
+      <boot_count>2</boot_count>
+      <maintenance>false</maintenance>
+      <connectivity>good</connectivity>
+      <mode>duplex</mode>
+      <bmc>
+        <MAC>a4:ba:db:27:44:01</MAC>
+        <address family="ipv4" prefix="16">169.254.222.113</address>
+      </bmc>
+      <memory unit="bytes">4284481536</memory>
+      <max_interfaces_per_domain>7</max_interfaces_per_domain>
+      <max_memory_per_domain unit="MB">32768</max_memory_per_domain>
+      <max_vcpus_per_domain>4</max_vcpus_per_domain>
+      <max_volumes_per_domain>8</max_volumes_per_domain>
+      <min_memory_per_domain unit="MB">32</min_memory_per_domain>
+      <total_guest_interfaces>64</total_guest_interfaces>
+      <total_guest_memory unit="MB">3197</total_guest_memory>
+      <total_shared_storage_regions>64</total_shared_storage_regions>
+      <total_vcpus>8</total_vcpus>
+      <cpus DEPRECATED="true">
+        <cpu>
+          <manufacturer>intel</manufacturer>
+          <speed>2793000.0</speed>
+          <family>6</family>
+          <model>44</model>
+          <modelname>Intel(R) Xeon(R) CPU E5630 @ 2.53GHz</modelname>
+          <index>2</index>
+        </cpu>
+        <cpu>
+          <manufacturer>intel</manufacturer>
+          <speed>2793000.0</speed>
+          <family>6</family>
+          <model>44</model>
+          <modelname>Intel(R) Xeon(R) CPU E5630 @ 2.53GHz</modelname>
+          <index>0</index>
+        </cpu>
+        <cpu>
+          <manufacturer>intel</manufacturer>
+          <speed>2793000.0</speed>
+          <family>6</family>
+          <model>44</model>
+          <modelname>Intel(R) Xeon(R) CPU E5630 @ 2.53GHz</modelname>
+          <index>1</index>
+        </cpu>
+        <cpu>
+          <manufacturer>intel</manufacturer>
+          <speed>2793000.0</speed>
+          <family>6</family>
+          <model>44</model>
+          <modelname>Intel(R) Xeon(R) CPU E5630 @ 2.53GHz</modelname>
+          <index>3</index>
+        </cpu>
+      </cpus>
+      <sensors>
+        <sensor id="efaec5d7-7141-40e9-8ca6-c7ffed0a6dbc">
+          <name>IPMI BIOS Memory Mirrored (34:1:18)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Fully redundant</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="7a9015b6-c30b-4e14-be4f-17e94c4d3e2c">
+          <name>IPMI BIOS Mem Fatal SB CRC (34:1:33)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="5f168051-defc-479f-8889-f8a111f36106">
+          <name>IPMI Processor Status (3:1:96)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Present</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="d29a56a3-f3a7-4195-a18e-ec1c26a76bdb">
+          <name>Baseboard Management Controller Health</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="b5bd5102-5ef0-4de8-adde-1f588768637f">
+          <name>IPMI Power Supply Status (10:1:100)</name>
+          <type>power</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="0639481c-2a51-4d22-8f9d-f423361fbff8">
+          <name>IPMI Motherboard 1.0V LOM PG (7:1:41)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="929672c7-8c75-4b13-adcf-03be2999654c">
+          <name>SMART sensor (2aec757f-5871-431e-b40e-f542fa5ba3fa)</name>
+          <type>smart</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="0da6acc8-2bb6-41c0-b68a-b19fe674b3cc"/>
+        </sensor>
+        <sensor id="12c40a10-63fc-4bb2-9106-e78dc79083d7">
+          <name>IPMI Motherboard System Level (7:1:152)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current unit="watts">161.0</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="19f9f5a1-ebe0-4e7a-b4c7-e3396457032a">
+          <name>IPMI Processor VCORE (3:1:18)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="708b3e8a-bff1-465f-b150-bc25fb576e12">
+          <name>IPMI Power Supply Status (10:2:101)</name>
+          <type>power</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="65df9f25-378a-4ab4-af6b-d38e5d7170d7">
+          <name>IPMI Motherboard FAN 1 RPM (7:1:48)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current unit="RPM">2040.0</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="53bc8c3d-6154-4388-a222-3ba85c6fa525">
+          <name>IPMI Motherboard CPU1 0.75 VTT PG (7:1:21)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="fb805e4b-3e9e-4650-93cd-46b4ee9fb753">
+          <name>IPMI Power Supply Voltage 2 (10:2:151)</name>
+          <type>power</type>
+          <status>normal</status>
+          <current unit="volts">118.0</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="6f86e9ff-5ab6-4716-b247-602a31e987ae">
+          <name>IPMI Motherboard CPU1 MEM PG (7:1:30)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="74499091-df9c-4106-bfcc-43aa84a8e845">
+          <name>IPMI Power Supply Voltage 1 (10:1:150)</name>
+          <type>power</type>
+          <status>normal</status>
+          <current unit="volts">120.0</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="e510612d-1ecf-468c-832a-88f07e4c969c">
+          <name>IPMI Motherboard 1.5V PG (7:1:23)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="9816c02e-d7c9-4b86-981a-83d7f7d92188">
+          <name>IPMI Motherboard 0.9V PG (7:1:33)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="21efece7-bd17-4134-bfbd-245a8254e7a3">
+          <name>IPMI Motherboard 1.8V PG (7:1:24)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="d669fc26-6e82-43ea-bb32-5b13e2bfac3b">
+          <name>IPMI BIOS Mem Overtemp (34:1:32)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="0092677b-085b-4664-b8fc-b0c60baba79b">
+          <name>IPMI Processor Status (3:2:97)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Not present</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="30cbbe58-cf57-4ba1-bc46-28e298c8126b">
+          <name>IPMI BIOS Mem Redun Gain (34:1:23)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Fully redundant</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="ffbb215f-3c2f-42ec-a460-e7dbc06acd9a">
+          <name>IPMI Motherboard CPU1 1.8 PLL PG (7:1:36)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="245273b2-7c0c-480a-9b5f-4d12dd5693fc">
+          <name>IPMI Power Supply Current 2 (10:2:149)</name>
+          <type>power</type>
+          <status>normal</status>
+          <current unit="amps">0.68</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="8cb6741e-934a-4be9-8d59-ff8fc29dd4a4">
+          <name>IPMI Motherboard 5V PG (7:1:26)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="68a3029c-2188-40e6-bb2a-a87491b0609c">
+          <name>IPMI Motherboard CPU1 VTT PG (7:1:32)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="1038dfa4-8b2e-4e23-9be1-f62c36c7238c">
+          <name>IPMI Motherboard 1.0V AUX PG (7:1:42)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="e028e125-c716-45a6-b653-083a1f59fd60">
+          <name>IPMI Motherboard CPU VTT (7:1:22)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="12dd25a3-5336-4768-80d7-0ea60bebaf35">
+          <name>IPMI Motherboard Ambient Temp (7:1:14)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current unit="C">24.0</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="50d169f9-d5bc-4780-ac05-3587313b4c07">
+          <name>IPMI Motherboard CMOS Battery (7:1:16)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="60f5d149-9c78-40ab-8785-1d0cf508b547">
+          <name>SMART sensor (3e3eae7f-1c4e-4141-9de0-cc86be810371)</name>
+          <type>smart</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="f11ac4bc-af1f-441a-a49c-17f523fc1d7b"/>
+        </sensor>
+        <sensor id="fdb0905f-1f20-4990-9d22-9959f1c44fe4">
+          <name>IPMI BIOS Memory Removed (34:1:21)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="96e60ddd-303c-4c75-b62c-d427df1c3694">
+          <name>IPMI Power Supply Current 1 (10:1:148)</name>
+          <type>power</type>
+          <status>normal</status>
+          <current unit="amps">0.68</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="8fe8ca75-ee79-4f90-9f69-de08ebae78e9">
+          <name>IPMI BIOS MSR Info Log (34:1:40)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="91db2829-a8be-42a0-a8f6-c85a7385dc95">
+          <name>IPMI BIOS Memory Cfg Err (34:1:22)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="9a95fbcf-6d93-4bbc-a429-c80cc55e0588">
+          <name>IPMI Motherboard PS Redundancy (7:1:116)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Fully redundant</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="dbd8118f-f93e-48ba-8067-b2bbc7cc1bd3">
+          <name>SMART sensor (57d58fdb-b7d6-499e-b3e7-6272a2ce3ec4)</name>
+          <type>smart</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="54c09ba0-a7d8-4277-b618-8814e1472abd"/>
+        </sensor>
+        <sensor id="81647dea-50e2-4243-a441-61233fb6987d">
+          <name>IPMI Motherboard 1.1V PG (7:1:40)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="040132f4-ab3b-4889-a50b-328d8478b16d">
+          <name>IPMI Motherboard Intrusion (7:1:115)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="aac18c80-d257-4eb7-b914-fb7075161c46"/>
+        </sensor>
+        <sensor id="06cd47a5-b54c-4e69-a92d-e5cc200974e5">
+          <name>SMART sensor (a6550d1c-7659-4756-b56b-a0ddb6a78c97)</name>
+          <type>smart</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="4ad1315a-6178-458a-b956-ed7debf74cdb"/>
+        </sensor>
+      </sensors>
+      <networks>
+        <interface id="9fb5bda8-ec26-4e89-ae04-cae55f83b773">
+          <name>eth_s1_0</name>
+          <access>business</access>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <connectivity>good</connectivity>
+          <device ref="47a80590-8240-446b-b0fd-e543446a037b"/>
+          <lan ref="0d4328a5-9d6e-40c9-8418-8c19d360c58e"/>
+        </interface>
+        <interface id="20c9c194-8e11-4684-8985-05921ce065b6">
+          <name>eth_s0_1</name>
+          <access>business</access>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <connectivity>good</connectivity>
+          <device ref="3106540e-6ca7-48be-b5a8-cb063bb58930"/>
+          <lan ref="011b64aa-173d-44bf-b34b-9ff790f54a27"/>
+        </interface>
+        <interface id="f98a96d2-b937-43aa-a932-14a1b13d8cbe">
+          <name>eth_s0_0</name>
+          <access>private</access>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <connectivity>good</connectivity>
+          <device ref="ecec92f3-baaa-442a-a32f-1c7e45d4f535"/>
+          <lan ref="9308fb0e-a569-42be-9164-6a4d8992318f"/>
+        </interface>
+        <interface id="92826490-8b61-48bf-bd56-2222f7bc77ef">
+          <name>eth_s1_1</name>
+          <access>business</access>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <connectivity>good</connectivity>
+          <device ref="1f726226-0687-403c-b227-9cb6a4e90258"/>
+          <lan ref="d0a9343f-1a74-434b-9754-1c9f6ff9053c"/>
+        </interface>
+      </networks>
+      <version>562954248388608</version>
+      <devices>
+        <chassis id="aac18c80-d257-4eb7-b914-fb7075161c46">
+          <status>normal</status>
+          <vendor>Dell Inc.</vendor>
+          <model>PowerEdge T410</model>
+          <serialNumber>5KJRBM1</serialNumber>
+        </chassis>
+        <processor id="89456d5e-af7e-4741-aafd-db2d55ac478a">
+          <status>normal</status>
+          <index>0</index>
+          <family>6</family>
+          <model>44</model>
+          <modelname>Intel(R) Xeon(R) CPU E5630 @ 2.53GHz</modelname>
+        </processor>
+        <core id="77572205-6203-4e35-bcaf-e2ccd596372a">
+          <status>normal</status>
+          <index>0</index>
+          <cpu>0</cpu>
+          <processor ref="89456d5e-af7e-4741-aafd-db2d55ac478a"/>
+        </core>
+        <core id="4fb8abc6-d422-4879-ae6f-971da8713864">
+          <status>normal</status>
+          <index>1</index>
+          <cpu>1</cpu>
+          <processor ref="89456d5e-af7e-4741-aafd-db2d55ac478a"/>
+        </core>
+        <core id="00e4ede6-c410-4002-9eb5-d2d1dcd50fe5">
+          <status>normal</status>
+          <index>2</index>
+          <cpu>2</cpu>
+          <processor ref="89456d5e-af7e-4741-aafd-db2d55ac478a"/>
+        </core>
+        <core id="f4c461be-365c-4142-aeb5-38a0cc220b48">
+          <status>normal</status>
+          <index>3</index>
+          <cpu>3</cpu>
+          <processor ref="89456d5e-af7e-4741-aafd-db2d55ac478a"/>
+        </core>
+        <card id="c454a76f-475a-4368-befc-a636db5165c3">
+          <status>normal</status>
+          <vendor>Broadcom Corporation</vendor>
+          <model>NetXtreme II BCM5716 Gigabit Ethernet</model>
+        </card>
+        <card id="0065ff73-4efa-432b-81e6-091445b36ca7">
+          <status>normal</status>
+          <vendor>Broadcom Corporation</vendor>
+          <model>NetXtreme II BCM5716 Gigabit Ethernet</model>
+        </card>
+        <card id="001f3d51-a099-42dc-9842-ebebb441f135">
+          <status>normal</status>
+          <vendor>Broadcom Corporation</vendor>
+          <model>NetXtreme II BCM5709 Gigabit Ethernet</model>
+        </card>
+        <card id="adacf746-9785-4273-8d74-ad017f029073">
+          <status>normal</status>
+          <vendor>Broadcom Corporation</vendor>
+          <model>NetXtreme II BCM5709 Gigabit Ethernet</model>
+        </card>
+        <port id="3106540e-6ca7-48be-b5a8-cb063bb58930">
+          <status>normal</status>
+          <kind>network</kind>
+          <address>a4:ba:db:27:44:00</address>
+          <mtu>1500</mtu>
+          <device>eth_s0_1</device>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <card ref="0065ff73-4efa-432b-81e6-091445b36ca7"/>
+        </port>
+        <port id="47a80590-8240-446b-b0fd-e543446a037b">
+          <status>normal</status>
+          <kind>network</kind>
+          <address>00:10:18:6d:2a:b0</address>
+          <mtu>1500</mtu>
+          <device>eth_s1_0</device>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <card ref="001f3d51-a099-42dc-9842-ebebb441f135"/>
+        </port>
+        <port id="1f726226-0687-403c-b227-9cb6a4e90258">
+          <status>normal</status>
+          <kind>network</kind>
+          <address>00:10:18:6d:2a:b2</address>
+          <mtu>1500</mtu>
+          <device>eth_s1_1</device>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <card ref="adacf746-9785-4273-8d74-ad017f029073"/>
+        </port>
+        <port id="ecec92f3-baaa-442a-a32f-1c7e45d4f535">
+          <status>normal</status>
+          <kind>network</kind>
+          <address>a4:ba:db:27:43:ff</address>
+          <mtu>1500</mtu>
+          <device>eth_s0_0</device>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <card ref="c454a76f-475a-4368-befc-a636db5165c3"/>
+        </port>
+      </devices>
+      <StorageDevices>
+        <Controllers>
+          <Controller id="c25abbce-91f6-431d-8927-87eade33e55e">
+            <name>Dell PERC H200 Adapter rev -r02</name>
+            <type>Serial Attached SCSI controller</type>
+            <status>normal</status>
+            <batteryStatus>notpresent</batteryStatus>
+            <supportMode>full</supportMode>
+            <vendor>LSI Logic / Symbios Logic</vendor>
+            <model>SAS2008 PCI-Express Fusion-MPT SAS-2 [Falcon]</model>
+            <hwRev>-r02</hwRev>
+            <firmwareRev>07.01.24.00</firmwareRev>
+            <driverRev>02.00.02.00</driverRev>
+            <driverName>mpt2sas</driverName>
+            <vendorState>Ready</vendorState>
+            <vendorStatus>Ok</vendorStatus>
+            <LogicalDisks>
+              <LogicalDisk id="57d58fdb-b7d6-499e-b3e7-6272a2ce3ec4">
+                <name>Logical Disk - 0</name>
+                <deviceNumber>0</deviceNumber>
+                <status>normal</status>
+                <systemDisk>true</systemDisk>
+                <raidRedundant>false</raidRedundant>
+                <statusEpoch>1279070854</statusEpoch>
+                <devicePath>/dev/sda</devicePath>
+                <vendorStatus>Ok</vendorStatus>
+                <vendorState>Ready</vendorState>
+                <size>160000000000</size>
+                <usedSize>159998114304</usedSize>
+                <remainingSize>1885696</remainingSize>
+                <replicationProgress>0</replicationProgress>
+                <raidLevel>none</raidLevel>
+                <legacyPairKey/>
+                <partitions>sda1,sda2,sda3</partitions>
+                <writePolicy>unknown</writePolicy>
+              </LogicalDisk>
+              <LogicalDisk id="2aec757f-5871-431e-b40e-f542fa5ba3fa">
+                <name>Logical Disk - 1</name>
+                <deviceNumber>1</deviceNumber>
+                <status>normal</status>
+                <systemDisk>false</systemDisk>
+                <raidRedundant>false</raidRedundant>
+                <statusEpoch>1279070855</statusEpoch>
+                <devicePath>/dev/sdc</devicePath>
+                <vendorStatus>Ok</vendorStatus>
+                <vendorState>Ready</vendorState>
+                <size>160000000000</size>
+                <usedSize>159998114304</usedSize>
+                <remainingSize>1885696</remainingSize>
+                <replicationProgress>0</replicationProgress>
+                <raidLevel>none</raidLevel>
+                <legacyPairKey/>
+                <partitions>sdc1</partitions>
+                <writePolicy>unknown</writePolicy>
+              </LogicalDisk>
+              <LogicalDisk id="a6550d1c-7659-4756-b56b-a0ddb6a78c97">
+                <name>Logical Disk - 2</name>
+                <deviceNumber>2</deviceNumber>
+                <status>normal</status>
+                <systemDisk>false</systemDisk>
+                <raidRedundant>false</raidRedundant>
+                <statusEpoch>1279070864</statusEpoch>
+                <devicePath>/dev/sdd</devicePath>
+                <vendorStatus>Ok</vendorStatus>
+                <vendorState>Ready</vendorState>
+                <size>160000000000</size>
+                <usedSize>159998114304</usedSize>
+                <remainingSize>1885696</remainingSize>
+                <replicationProgress>0</replicationProgress>
+                <raidLevel>none</raidLevel>
+                <legacyPairKey/>
+                <partitions>sdd1</partitions>
+                <writePolicy>unknown</writePolicy>
+              </LogicalDisk>
+              <LogicalDisk id="3e3eae7f-1c4e-4141-9de0-cc86be810371">
+                <name>Logical Disk - 3</name>
+                <deviceNumber>3</deviceNumber>
+                <status>normal</status>
+                <systemDisk>true</systemDisk>
+                <raidRedundant>false</raidRedundant>
+                <statusEpoch>1279070877</statusEpoch>
+                <devicePath>/dev/sdb</devicePath>
+                <vendorStatus>Ok</vendorStatus>
+                <vendorState>Ready</vendorState>
+                <size>160000000000</size>
+                <usedSize>159998114304</usedSize>
+                <remainingSize>1885696</remainingSize>
+                <replicationProgress>0</replicationProgress>
+                <raidLevel>none</raidLevel>
+                <legacyPairKey/>
+                <partitions>sdb1,sdb2,sdb3</partitions>
+                <writePolicy>unknown</writePolicy>
+              </LogicalDisk>
+            </LogicalDisks>
+          </Controller>
+        </Controllers>
+        <Enclosures>
+          <Enclosure id="9a26cad3-8a8b-4242-a947-d5b5a697444e">
+            <name>00</name>
+            <DiskSlots>
+              <DiskSlot id="be9bf8b7-6152-4cc2-98a0-0185ec7b8122">
+                <name>0</name>
+                <PhysicalDisk id="54c09ba0-a7d8-4277-b618-8814e1472abd">
+                  <name>WD-WCAT2603361433614</name>
+                  <logicalDisk ref="57d58fdb-b7d6-499e-b3e7-6272a2ce3ec4"/>
+                  <controller ref="c25abbce-91f6-431d-8927-87eade33e55e"/>
+                  <status>normal</status>
+                  <statusEpoch>1279070877</statusEpoch>
+                  <vendorStatus>Ok</vendorStatus>
+                  <vendorState>Ready</vendorState>
+                  <size>159450660864</size>
+                  <vendor>DELL</vendor>
+                  <model>WDC WD1602ABKS-18N8A0</model>
+                  <firmwareRev>02.03B04</firmwareRev>
+                  <serialNumber>WD-WCAT2603361433614</serialNumber>
+                  <spare>none</spare>
+                </PhysicalDisk>
+              </DiskSlot>
+              <DiskSlot id="82f8f27d-35d0-4471-9a45-346da2f21406">
+                <name>1</name>
+                <PhysicalDisk id="0da6acc8-2bb6-41c0-b68a-b19fe674b3cc">
+                  <name>WD-WCAT2603255132551</name>
+                  <logicalDisk ref="2aec757f-5871-431e-b40e-f542fa5ba3fa"/>
+                  <controller ref="c25abbce-91f6-431d-8927-87eade33e55e"/>
+                  <status>normal</status>
+                  <statusEpoch>1279070877</statusEpoch>
+                  <vendorStatus>Ok</vendorStatus>
+                  <vendorState>Ready</vendorState>
+                  <size>159450660864</size>
+                  <vendor>DELL</vendor>
+                  <model>WDC WD1602ABKS-18N8A0</model>
+                  <firmwareRev>02.03B04</firmwareRev>
+                  <serialNumber>WD-WCAT2603255132551</serialNumber>
+                  <spare>none</spare>
+                </PhysicalDisk>
+              </DiskSlot>
+              <DiskSlot id="4a4215f1-7a19-4f44-a2f2-f9b1ceba5e93">
+                <name>2</name>
+                <PhysicalDisk id="4ad1315a-6178-458a-b956-ed7debf74cdb">
+                  <name>WD-WCAT2603358833588</name>
+                  <logicalDisk ref="a6550d1c-7659-4756-b56b-a0ddb6a78c97"/>
+                  <controller ref="c25abbce-91f6-431d-8927-87eade33e55e"/>
+                  <status>normal</status>
+                  <statusEpoch>1279070877</statusEpoch>
+                  <vendorStatus>Ok</vendorStatus>
+                  <vendorState>Ready</vendorState>
+                  <size>159450660864</size>
+                  <vendor>DELL</vendor>
+                  <model>WDC WD1602ABKS-18N8A0</model>
+                  <firmwareRev>02.03B04</firmwareRev>
+                  <serialNumber>WD-WCAT2603358833588</serialNumber>
+                  <spare>none</spare>
+                </PhysicalDisk>
+              </DiskSlot>
+              <DiskSlot id="ec71b81b-a317-4327-b679-78616a467be4">
+                <name>3</name>
+                <PhysicalDisk id="f11ac4bc-af1f-441a-a49c-17f523fc1d7b">
+                  <name>WD-WCAT2603253132531</name>
+                  <logicalDisk ref="3e3eae7f-1c4e-4141-9de0-cc86be810371"/>
+                  <controller ref="c25abbce-91f6-431d-8927-87eade33e55e"/>
+                  <status>normal</status>
+                  <statusEpoch>1279070877</statusEpoch>
+                  <vendorStatus>Ok</vendorStatus>
+                  <vendorState>Ready</vendorState>
+                  <size>159450660864</size>
+                  <vendor>DELL</vendor>
+                  <model>WDC WD1602ABKS-18N8A0</model>
+                  <firmwareRev>02.03B04</firmwareRev>
+                  <serialNumber>WD-WCAT2603253132531</serialNumber>
+                  <spare>none</spare>
+                </PhysicalDisk>
+              </DiskSlot>
+            </DiskSlots>
+          </Enclosure>
+        </Enclosures>
+      </StorageDevices>
+      <Storage>
+        <StorageElement id="d0969008-1840-44f3-8969-b008883c2407">
+          <name>StorageElement-0002</name>
+          <carvable>false</carvable>
+          <attachable>false</attachable>
+          <writable>false</writable>
+          <logicalDisk ref="a6550d1c-7659-4756-b56b-a0ddb6a78c97"/>
+          <size>160000000000</size>
+          <capacity unit="MB">152587</capacity>
+          <usedSize>4079616</usedSize>
+          <remainingSize>159995920384</remainingSize>
+          <available unit="MB">152584</available>
+          <VolumeElements/>
+        </StorageElement>
+        <StorageElement id="a9c9eaf0-4774-4a7d-bf8e-84bfa0ca2901">
+          <name>StorageElement-0003</name>
+          <carvable>false</carvable>
+          <attachable>false</attachable>
+          <writable>false</writable>
+          <logicalDisk ref="3e3eae7f-1c4e-4141-9de0-cc86be810371"/>
+          <size>160000000000</size>
+          <capacity unit="MB">152587</capacity>
+          <usedSize>12884787200</usedSize>
+          <remainingSize>147115212800</remainingSize>
+          <available unit="MB">140300</available>
+          <VolumeElements>
+            <VolumeElement id="b202f661-8511-482f-bc4f-b3722e11cbc5">
+              <name>3e3eae7f-1c4e-4141-9de0-cc86be810371-part1</name>
+              <carvable>false</carvable>
+              <attachable>false</attachable>
+              <writable>false</writable>
+              <size>20964762</size>
+              <capacity unit="MB">19</capacity>
+              <replicationStatus>normal</replicationStatus>
+              <replicationStatusEpoch>1279135639345</replicationStatusEpoch>
+            </VolumeElement>
+            <VolumeElement id="a974523d-0fc4-4e97-873f-bedc58df57ac">
+              <name>3e3eae7f-1c4e-4141-9de0-cc86be810371-part2</name>
+              <carvable>false</carvable>
+              <attachable>false</attachable>
+              <writable>false</writable>
+              <size>4192965</size>
+              <capacity unit="MB">3</capacity>
+              <replicationStatus>normal</replicationStatus>
+              <replicationStatusEpoch>1279135639421</replicationStatusEpoch>
+            </VolumeElement>
+          </VolumeElements>
+        </StorageElement>
+        <StorageElement id="c16edf93-35fc-4ae0-aebd-dc4b0aecc5db">
+          <name>StorageElement-0001</name>
+          <carvable>false</carvable>
+          <attachable>false</attachable>
+          <writable>false</writable>
+          <logicalDisk ref="2aec757f-5871-431e-b40e-f542fa5ba3fa"/>
+          <size>160000000000</size>
+          <capacity unit="MB">152587</capacity>
+          <usedSize>4079616</usedSize>
+          <remainingSize>159995920384</remainingSize>
+          <available unit="MB">152584</available>
+          <VolumeElements/>
+        </StorageElement>
+        <StorageElement id="fea4a057-6948-4b03-a50d-2ce4247c91dc">
+          <name>StorageElement-0000</name>
+          <carvable>false</carvable>
+          <attachable>false</attachable>
+          <writable>false</writable>
+          <logicalDisk ref="57d58fdb-b7d6-499e-b3e7-6272a2ce3ec4"/>
+          <size>160000000000</size>
+          <capacity unit="MB">152587</capacity>
+          <usedSize>12884787200</usedSize>
+          <remainingSize>145773035520</remainingSize>
+          <available unit="MB">139020</available>
+          <VolumeElements>
+            <VolumeElement id="42e6d0be-cfd0-4e0e-a801-ef7f9bef6896">
+              <name>57d58fdb-b7d6-499e-b3e7-6272a2ce3ec4-part1</name>
+              <carvable>false</carvable>
+              <attachable>false</attachable>
+              <writable>false</writable>
+              <size>20964762</size>
+              <capacity unit="MB">19</capacity>
+              <replicationStatus>normal</replicationStatus>
+              <replicationStatusEpoch>1279135639497</replicationStatusEpoch>
+            </VolumeElement>
+            <VolumeElement id="ab28114a-fa87-41bb-8c53-8bf61b4a4498">
+              <name>region.0d421547-99ae-4ba7-9c95-abf955447825</name>
+              <carvable>false</carvable>
+              <attachable>false</attachable>
+              <writable>false</writable>
+              <size>1073741824</size>
+              <capacity unit="MB">1024</capacity>
+              <replicationStatus>normal</replicationStatus>
+              <replicationStatusEpoch>1279135639580</replicationStatusEpoch>
+            </VolumeElement>
+            <VolumeElement id="af1e8833-0b49-460d-993e-afdc9877c6cb">
+              <name>57d58fdb-b7d6-499e-b3e7-6272a2ce3ec4-part2</name>
+              <carvable>false</carvable>
+              <attachable>false</attachable>
+              <writable>false</writable>
+              <size>4192965</size>
+              <capacity unit="MB">3</capacity>
+              <replicationStatus>normal</replicationStatus>
+              <replicationStatusEpoch>1279135639649</replicationStatusEpoch>
+            </VolumeElement>
+            <VolumeElement id="1c131d0e-2092-4b13-ba54-0134040a3d1b">
+              <name>region.ade88ef7-1432-403b-871b-b1e0a38d719c</name>
+              <carvable>false</carvable>
+              <attachable>false</attachable>
+              <writable>false</writable>
+              <size>268435456</size>
+              <capacity unit="MB">256</capacity>
+              <replicationStatus>normal</replicationStatus>
+              <replicationStatusEpoch>1279135639716</replicationStatusEpoch>
+            </VolumeElement>
+          </VolumeElements>
+        </StorageElement>
+        <PrivateStorage id="796769ff-5e55-4b81-b04d-673edf60ec64">
+          <name>md0</name>
+          <carvable>false</carvable>
+          <attachable>false</attachable>
+          <writable>false</writable>
+          <size>20964608</size>
+          <capacity unit="MB">19</capacity>
+          <replicationStatus>normal</replicationStatus>
+          <replicationProgress>0</replicationProgress>
+          <storage>
+            <VolumeElement ref="b202f661-8511-482f-bc4f-b3722e11cbc5"/>
+            <VolumeElement ref="42e6d0be-cfd0-4e0e-a801-ef7f9bef6896"/>
+          </storage>
+        </PrivateStorage>
+        <PrivateStorage id="80fadf4d-becb-4be5-a5c6-c569f9a38323">
+          <name>md1</name>
+          <carvable>false</carvable>
+          <attachable>false</attachable>
+          <writable>false</writable>
+          <size>4192768</size>
+          <capacity unit="MB">3</capacity>
+          <replicationStatus>normal</replicationStatus>
+          <replicationProgress>0</replicationProgress>
+          <storage>
+            <VolumeElement ref="a974523d-0fc4-4e97-873f-bedc58df57ac"/>
+            <VolumeElement ref="af1e8833-0b49-460d-993e-afdc9877c6cb"/>
+          </storage>
+        </PrivateStorage>
+      </Storage>
+    </system>
+    <system id="cccd22a2-2b54-4d4f-8041-ea1fcfcff3e8" primary="false">
+      <name>node1</name>
+      <cluster ref="53838a43-2096-46e5-8389-219363534c05"/>
+      <state>running</state>
+      <pwrstate>running</pwrstate>
+      <membership>full</membership>
+      <kit ref="269f4bda-5224-4e23-9ec8-883681744ada"/>
+      <manufacturer/>
+      <model supported="true"/>
+      <serial/>
+      <bios>
+        <nx/>
+        <vmx/>
+        <bootseq good="false"/>
+      </bios>
+      <boot_time>1279135352</boot_time>
+      <boot_count>9</boot_count>
+      <connectivity>good</connectivity>
+      <mode>duplex</mode>
+      <bmc>
+        <MAC>a4:ba:db:27:50:d3</MAC>
+        <address family="ipv4" prefix="16">169.254.207.128</address>
+      </bmc>
+      <memory unit="bytes">4284481536</memory>
+      <max_interfaces_per_domain>7</max_interfaces_per_domain>
+      <max_memory_per_domain unit="MB">32768</max_memory_per_domain>
+      <max_vcpus_per_domain>4</max_vcpus_per_domain>
+      <max_volumes_per_domain>8</max_volumes_per_domain>
+      <min_memory_per_domain unit="MB">32</min_memory_per_domain>
+      <total_guest_interfaces>64</total_guest_interfaces>
+      <total_guest_memory unit="MB">3197</total_guest_memory>
+      <total_shared_storage_regions>64</total_shared_storage_regions>
+      <total_vcpus>8</total_vcpus>
+      <cpus DEPRECATED="true">
+        <cpu>
+          <manufacturer>intel</manufacturer>
+          <speed>2793000.0</speed>
+          <family>6</family>
+          <model>44</model>
+          <modelname>Intel(R) Xeon(R) CPU E5630 @ 2.53GHz</modelname>
+          <index>1</index>
+        </cpu>
+        <cpu>
+          <manufacturer>intel</manufacturer>
+          <speed>2793000.0</speed>
+          <family>6</family>
+          <model>44</model>
+          <modelname>Intel(R) Xeon(R) CPU E5630 @ 2.53GHz</modelname>
+          <index>0</index>
+        </cpu>
+        <cpu>
+          <manufacturer>intel</manufacturer>
+          <speed>2793000.0</speed>
+          <family>6</family>
+          <model>44</model>
+          <modelname>Intel(R) Xeon(R) CPU E5630 @ 2.53GHz</modelname>
+          <index>3</index>
+        </cpu>
+        <cpu>
+          <manufacturer>intel</manufacturer>
+          <speed>2793000.0</speed>
+          <family>6</family>
+          <model>44</model>
+          <modelname>Intel(R) Xeon(R) CPU E5630 @ 2.53GHz</modelname>
+          <index>2</index>
+        </cpu>
+      </cpus>
+      <sensors>
+        <sensor id="77deabdd-f377-4265-8814-f7fd6ea96748">
+          <name>IPMI Motherboard 0.9V PG (7:1:33)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="9157da7b-3f03-4d17-a46b-533eb382e041">
+          <name>IPMI Processor Status (3:2:97)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Not present</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="b65ccd98-085d-43d6-a4b8-1883d19aefd0">
+          <name>IPMI Motherboard 5V PG (7:1:26)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="8d26b375-a29d-4a70-afd0-ad9059203e4c">
+          <name>IPMI Motherboard 1.0V AUX PG (7:1:42)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="5eeb7468-8007-4fc1-8269-31cc071d4ce6">
+          <name>SMART sensor (b193dc35-2402-437c-a8b9-2bf848a967c7)</name>
+          <type>smart</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="0bfb4478-b187-411c-b183-3d67c876a644"/>
+        </sensor>
+        <sensor id="ad7813ef-ba28-413f-89a6-401029986799">
+          <name>IPMI Power Supply Current 2 (10:2:149)</name>
+          <type>power</type>
+          <status>normal</status>
+          <current unit="amps">0.68</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="398c97a8-b75d-4d3d-bd1a-1d94927298d9">
+          <name>SMART sensor (9d4bf7cd-f94b-4619-84c9-d62193d040b5)</name>
+          <type>smart</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="71d81fdc-9399-4177-92cb-e6097ddce739"/>
+        </sensor>
+        <sensor id="ed9cffba-ed18-4c16-bfa0-495d7d1ffdd4">
+          <name>IPMI BIOS ECC Corr Err (34:1:1)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Unknown,Unknown</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="627470e6-04a3-49ea-913b-394173cf5bd0">
+          <name>IPMI Motherboard FAN 1 RPM (7:1:48)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current unit="RPM">1800.0</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="76dbd66c-af9d-46d9-b445-6db416d05080">
+          <name>IPMI Motherboard 1.5V PG (7:1:23)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="44758122-e5e8-4e4f-9a10-4a3794498ab4">
+          <name>IPMI BIOS Mem Redun Gain (34:1:23)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Fully redundant</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="b98c6ac5-5d47-4d6a-a199-8fa71bfb9f6a">
+          <name>IPMI Motherboard CPU1 1.8 PLL PG (7:1:36)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="1801739c-90d5-4264-ad31-41a07219c4f8">
+          <name>IPMI BIOS Mem Fatal SB CRC (34:1:33)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="336d4ede-87dc-4612-b8c5-a170f058d5ea">
+          <name>IPMI Power Supply Status (10:2:101)</name>
+          <type>power</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="287bb00d-14e7-4ab3-866b-06546796dcf8">
+          <name>IPMI Motherboard CMOS Battery (7:1:16)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="1a83bddd-776e-4d45-951a-2cdb435b6bec">
+          <name>IPMI Motherboard CPU1 VTT PG (7:1:32)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="548007e0-2728-4fe1-a678-0b0aa2c3db5e">
+          <name>IPMI BIOS Memory Cfg Err (34:1:22)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="9f8f1522-15de-42eb-945c-d074ee8ee1e2">
+          <name>IPMI Processor VCORE (3:1:18)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="48a770e1-a034-49c2-b1af-e225d10c6a83">
+          <name>IPMI Motherboard Ambient Temp (7:1:14)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current unit="C">23.0</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="1c7ee0e3-9b39-4dc3-a61b-61aa145e26f7">
+          <name>IPMI Processor Status (3:1:96)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Present</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="2adadfb4-7461-4290-9d39-9ffebfdac6c2">
+          <name>IPMI Motherboard PS Redundancy (7:1:116)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Fully redundant</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="2a49ced0-f1aa-45b5-81ba-ddf007a16a96">
+          <name>IPMI Motherboard System Level (7:1:152)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current unit="watts">161.0</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="8a76344b-65c5-4cb9-89e5-80a6b0087c0c">
+          <name>IPMI Motherboard 1.8V PG (7:1:24)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="d40a2d36-99fe-4183-85b6-51f9e2e4bc74">
+          <name>IPMI Processor Temp (3:1:1)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current unit="C">-67.0</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="1804d8d4-73f3-4da1-8129-aca284ac9eed">
+          <name>IPMI Motherboard CPU1 0.75 VTT PG (7:1:21)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="af6a6249-69f5-4f88-b67c-3996e9c8316e">
+          <name>SMART sensor (4fa476f4-4332-44d9-8136-52a1e254d3f7)</name>
+          <type>smart</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="015ad040-3176-4910-890c-abe633d91f94"/>
+        </sensor>
+        <sensor id="302ce0de-9fa0-4dc3-b354-36ed3c66ef85">
+          <name>IPMI Power Supply Voltage 1 (10:1:150)</name>
+          <type>power</type>
+          <status>normal</status>
+          <current unit="volts">120.0</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="a8cc6874-c264-4fb5-b680-84b36de92f5a">
+          <name>IPMI Motherboard Intrusion (7:1:115)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="cd94c21c-d305-4447-a036-3220033e2095">
+          <name>IPMI BIOS Memory Removed (34:1:21)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="b54f6a7e-f891-4c7d-a2f3-5350ecf9f75f">
+          <name>IPMI Motherboard 1.1V PG (7:1:40)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="4958c30b-fbb1-4dd6-a7c9-97f07beff16b">
+          <name>Baseboard Management Controller Health</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="1f637743-d03d-49db-9b71-9d870e94f52c">
+          <name>IPMI Motherboard 1.0V LOM PG (7:1:41)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="fd7aa4dc-33d6-4b19-9cb2-7c58793f1029">
+          <name>IPMI Power Supply Current 1 (10:1:148)</name>
+          <type>power</type>
+          <status>normal</status>
+          <current unit="amps">0.68</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="66850b1d-93fd-479e-a148-fc121c8fa5c7">
+          <name>IPMI BIOS Mem Overtemp (34:1:32)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="5678c4d1-093e-4708-8606-9e189d596a1e">
+          <name>IPMI BIOS MSR Info Log (34:1:40)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="8fc73bcf-3d97-4ec2-bb7b-be1d01e94876">
+          <name>IPMI Motherboard CPU VTT (7:1:22)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="312b26a3-18b9-43ac-ad71-c56ee22bc822">
+          <name>IPMI BIOS Memory Mirrored (34:1:18)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Fully redundant</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="ddee8b2d-d792-4080-991d-d0646fcc641a">
+          <name>SMART sensor (179ad5a8-ab00-4247-850f-cccf9379e6ba)</name>
+          <type>smart</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="fc3bd8e1-2630-43ec-a66c-0dcd254f13a7"/>
+        </sensor>
+        <sensor id="4be42eaf-7936-4f22-a96d-2bb2a8a6eeed">
+          <name>IPMI Power Supply Voltage 2 (10:2:151)</name>
+          <type>power</type>
+          <status>normal</status>
+          <current unit="volts">120.0</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="75ceb817-3220-4f45-85b7-8fd3e9de6afd">
+          <name>IPMI Power Supply Status (10:1:100)</name>
+          <type>power</type>
+          <status>normal</status>
+          <current>Normal</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+        <sensor id="11998818-6b69-4410-9d18-c0e3eb8733be">
+          <name>IPMI Motherboard CPU1 MEM PG (7:1:30)</name>
+          <type>ipmi</type>
+          <status>normal</status>
+          <current>Deasserted</current>
+          <device ref="29799937-e0c6-4d61-ae67-ac4992041dfc"/>
+        </sensor>
+      </sensors>
+      <networks>
+        <interface id="cf6b1477-75f1-4557-80a3-18ec6329af8e">
+          <name>eth_s0_0</name>
+          <access>private</access>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <connectivity>good</connectivity>
+          <device ref="e80edf3c-5ef2-4492-80ff-fc9febacab59"/>
+          <lan ref="9308fb0e-a569-42be-9164-6a4d8992318f"/>
+        </interface>
+        <interface id="e54f0ac8-c783-412e-8d6d-3386476e0d2a">
+          <name>eth_s0_1</name>
+          <access>business</access>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <connectivity>good</connectivity>
+          <device ref="a7b12c25-e15b-4b98-936b-f41db3956b0b"/>
+          <lan ref="011b64aa-173d-44bf-b34b-9ff790f54a27"/>
+        </interface>
+        <interface id="20cb218b-df5d-4649-8140-5282acd28f9d">
+          <name>eth_s1_1</name>
+          <access>business</access>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <connectivity>good</connectivity>
+          <device ref="776de23d-592c-46bc-8843-e143a67221a1"/>
+          <lan ref="0d4328a5-9d6e-40c9-8418-8c19d360c58e"/>
+        </interface>
+        <interface id="4a6009cb-1148-482d-80c1-2fc128379b81">
+          <name>eth_s1_0</name>
+          <access>business</access>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <connectivity>good</connectivity>
+          <device ref="b5ae5484-e268-4e4d-b945-c376045676c5"/>
+          <lan ref="d0a9343f-1a74-434b-9754-1c9f6ff9053c"/>
+        </interface>
+      </networks>
+      <devices>
+        <chassis id="29799937-e0c6-4d61-ae67-ac4992041dfc">
+          <status>normal</status>
+          <vendor>Dell Inc.</vendor>
+          <model>PowerEdge T410</model>
+          <serialNumber>6KJRBM1</serialNumber>
+        </chassis>
+        <processor id="5ae71772-35d9-445a-9f72-f7f564121be3">
+          <status>normal</status>
+          <index>0</index>
+          <family>6</family>
+          <model>44</model>
+          <modelname>Intel(R) Xeon(R) CPU E5630 @ 2.53GHz</modelname>
+        </processor>
+        <core id="caabc28e-5132-4c82-ac88-9992b2e93b98">
+          <status>normal</status>
+          <index>0</index>
+          <cpu>0</cpu>
+          <processor ref="5ae71772-35d9-445a-9f72-f7f564121be3"/>
+        </core>
+        <core id="706e187f-c855-4119-804b-f386981ffdd5">
+          <status>normal</status>
+          <index>1</index>
+          <cpu>1</cpu>
+          <processor ref="5ae71772-35d9-445a-9f72-f7f564121be3"/>
+        </core>
+        <core id="4d5346f0-da83-40a4-ade1-00b959bb61fc">
+          <status>normal</status>
+          <index>2</index>
+          <cpu>2</cpu>
+          <processor ref="5ae71772-35d9-445a-9f72-f7f564121be3"/>
+        </core>
+        <core id="3aef04ae-8cfa-485f-acbf-c3b90fa69599">
+          <status>normal</status>
+          <index>3</index>
+          <cpu>3</cpu>
+          <processor ref="5ae71772-35d9-445a-9f72-f7f564121be3"/>
+        </core>
+        <card id="53508335-398a-4b66-a8e8-92dd7787fccd">
+          <status>normal</status>
+          <vendor>Broadcom Corporation</vendor>
+          <model>NetXtreme II BCM5716 Gigabit Ethernet</model>
+        </card>
+        <card id="dec28828-85b6-4a10-b299-16109c9f257f">
+          <status>normal</status>
+          <vendor>Broadcom Corporation</vendor>
+          <model>NetXtreme II BCM5716 Gigabit Ethernet</model>
+        </card>
+        <card id="a5079124-0770-4974-8071-d5f3c6aff1ea">
+          <status>normal</status>
+          <vendor>Broadcom Corporation</vendor>
+          <model>NetXtreme II BCM5709 Gigabit Ethernet</model>
+        </card>
+        <card id="15a319c2-724b-479a-bf74-d5b8534215e8">
+          <status>normal</status>
+          <vendor>Broadcom Corporation</vendor>
+          <model>NetXtreme II BCM5709 Gigabit Ethernet</model>
+        </card>
+        <port id="f51e098b-8d85-4ecd-a1f4-3dcfeefd49cc">
+          <status>normal</status>
+          <kind>network</kind>
+          <address>00:10:18:6d:2a:d4</address>
+          <mtu>1500</mtu>
+          <device>eth2</device>
+          <card ref="a5079124-0770-4974-8071-d5f3c6aff1ea"/>
+        </port>
+        <port id="3322506b-79ae-4352-9343-ebe2774fb143">
+          <status>normal</status>
+          <kind>network</kind>
+          <address>00:10:18:6d:2a:d6</address>
+          <mtu>1500</mtu>
+          <device>eth3</device>
+          <card ref="15a319c2-724b-479a-bf74-d5b8534215e8"/>
+        </port>
+        <port id="a7b12c25-e15b-4b98-936b-f41db3956b0b">
+          <status>normal</status>
+          <kind>network</kind>
+          <address>a4:ba:db:27:50:d2</address>
+          <mtu>1500</mtu>
+          <device>eth_s0_1</device>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <card ref="dec28828-85b6-4a10-b299-16109c9f257f"/>
+        </port>
+        <port id="b5ae5484-e268-4e4d-b945-c376045676c5">
+          <status>normal</status>
+          <kind>network</kind>
+          <address>00:10:18:6d:2a:d6</address>
+          <mtu>1500</mtu>
+          <device>eth_s1_0</device>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <card ref="15a319c2-724b-479a-bf74-d5b8534215e8"/>
+        </port>
+        <port id="776de23d-592c-46bc-8843-e143a67221a1">
+          <status>normal</status>
+          <kind>network</kind>
+          <address>00:10:18:6d:2a:d6</address>
+          <mtu>1500</mtu>
+          <device>eth_s1_1</device>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <card ref="15a319c2-724b-479a-bf74-d5b8534215e8"/>
+        </port>
+        <port id="e80edf3c-5ef2-4492-80ff-fc9febacab59">
+          <status>normal</status>
+          <kind>network</kind>
+          <address>a4:ba:db:27:50:d1</address>
+          <mtu>1500</mtu>
+          <device>eth_s0_0</device>
+          <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+          <card ref="53508335-398a-4b66-a8e8-92dd7787fccd"/>
+        </port>
+      </devices>
+      <StorageDevices>
+        <Controllers>
+          <Controller id="0eaae050-698b-40d4-85c6-de57c6db7c01">
+            <name>Dell PERC H200 Adapter rev -r02</name>
+            <type>Serial Attached SCSI controller</type>
+            <status>normal</status>
+            <batteryStatus>notpresent</batteryStatus>
+            <supportMode>full</supportMode>
+            <vendor>LSI Logic / Symbios Logic</vendor>
+            <model>SAS2008 PCI-Express Fusion-MPT SAS-2 [Falcon]</model>
+            <hwRev>-r02</hwRev>
+            <firmwareRev>07.01.24.00</firmwareRev>
+            <driverRev>02.00.02.00</driverRev>
+            <driverName>mpt2sas</driverName>
+            <vendorState>Ready</vendorState>
+            <vendorStatus>Ok</vendorStatus>
+            <LogicalDisks>
+              <LogicalDisk id="b193dc35-2402-437c-a8b9-2bf848a967c7">
+                <name>Logical Disk - 0</name>
+                <deviceNumber>0</deviceNumber>
+                <status>normal</status>
+                <systemDisk>true</systemDisk>
+                <raidRedundant>false</raidRedundant>
+                <statusEpoch>1279071027</statusEpoch>
+                <devicePath>/dev/sda</devicePath>
+                <vendorStatus>Ok</vendorStatus>
+                <vendorState>Ready</vendorState>
+                <size>160000000000</size>
+                <usedSize>159998114304</usedSize>
+                <remainingSize>1885696</remainingSize>
+                <replicationProgress>0</replicationProgress>
+                <raidLevel>none</raidLevel>
+                <legacyPairKey/>
+                <partitions>sda1,sda2,sda3</partitions>
+                <writePolicy>unknown</writePolicy>
+              </LogicalDisk>
+              <LogicalDisk id="179ad5a8-ab00-4247-850f-cccf9379e6ba">
+                <name>Logical Disk - 1</name>
+                <deviceNumber>1</deviceNumber>
+                <status>normal</status>
+                <systemDisk>false</systemDisk>
+                <raidRedundant>false</raidRedundant>
+                <statusEpoch>1279071027</statusEpoch>
+                <devicePath>/dev/sdc</devicePath>
+                <vendorStatus>Ok</vendorStatus>
+                <vendorState>Ready</vendorState>
+                <size>160000000000</size>
+                <usedSize>159998114304</usedSize>
+                <remainingSize>1885696</remainingSize>
+                <replicationProgress>0</replicationProgress>
+                <raidLevel>none</raidLevel>
+                <legacyPairKey/>
+                <partitions>sdc1</partitions>
+                <writePolicy>unknown</writePolicy>
+              </LogicalDisk>
+              <LogicalDisk id="4fa476f4-4332-44d9-8136-52a1e254d3f7">
+                <name>Logical Disk - 2</name>
+                <deviceNumber>2</deviceNumber>
+                <status>normal</status>
+                <systemDisk>false</systemDisk>
+                <raidRedundant>false</raidRedundant>
+                <statusEpoch>1279071036</statusEpoch>
+                <devicePath>/dev/sdd</devicePath>
+                <vendorStatus>Ok</vendorStatus>
+                <vendorState>Ready</vendorState>
+                <size>160000000000</size>
+                <usedSize>159998114304</usedSize>
+                <remainingSize>1885696</remainingSize>
+                <replicationProgress>0</replicationProgress>
+                <raidLevel>none</raidLevel>
+                <legacyPairKey/>
+                <partitions>sdd1</partitions>
+                <writePolicy>unknown</writePolicy>
+              </LogicalDisk>
+              <LogicalDisk id="9d4bf7cd-f94b-4619-84c9-d62193d040b5">
+                <name>Logical Disk - 3</name>
+                <deviceNumber>3</deviceNumber>
+                <status>normal</status>
+                <systemDisk>true</systemDisk>
+                <raidRedundant>false</raidRedundant>
+                <statusEpoch>1279071043</statusEpoch>
+                <devicePath>/dev/sdb</devicePath>
+                <vendorStatus>Ok</vendorStatus>
+                <vendorState>Ready</vendorState>
+                <size>160000000000</size>
+                <usedSize>159998114304</usedSize>
+                <remainingSize>1885696</remainingSize>
+                <replicationProgress>0</replicationProgress>
+                <raidLevel>none</raidLevel>
+                <legacyPairKey/>
+                <partitions>sdb1,sdb2,sdb3</partitions>
+                <writePolicy>unknown</writePolicy>
+              </LogicalDisk>
+            </LogicalDisks>
+          </Controller>
+        </Controllers>
+        <Enclosures>
+          <Enclosure id="290064a9-5207-4612-a8dd-6e753f585f79">
+            <name>00</name>
+            <DiskSlots>
+              <DiskSlot id="983098a4-f7ce-4610-bef6-edb94381702f">
+                <name>0</name>
+                <PhysicalDisk id="0bfb4478-b187-411c-b183-3d67c876a644">
+                  <name>WD-WCAT2603980639806</name>
+                  <logicalDisk ref="b193dc35-2402-437c-a8b9-2bf848a967c7"/>
+                  <controller ref="0eaae050-698b-40d4-85c6-de57c6db7c01"/>
+                  <status>normal</status>
+                  <statusEpoch>1279071044</statusEpoch>
+                  <vendorStatus>Ok</vendorStatus>
+                  <vendorState>Ready</vendorState>
+                  <size>159450660864</size>
+                  <vendor>DELL</vendor>
+                  <model>WDC WD1602ABKS-18N8A0</model>
+                  <firmwareRev>02.03B04</firmwareRev>
+                  <serialNumber>WD-WCAT2603980639806</serialNumber>
+                  <spare>none</spare>
+                </PhysicalDisk>
+              </DiskSlot>
+              <DiskSlot id="dcf6bb4c-afd0-4a4e-aaf9-d70b5676259c">
+                <name>1</name>
+                <PhysicalDisk id="fc3bd8e1-2630-43ec-a66c-0dcd254f13a7">
+                  <name>WD-WCAT2603666936669</name>
+                  <logicalDisk ref="179ad5a8-ab00-4247-850f-cccf9379e6ba"/>
+                  <controller ref="0eaae050-698b-40d4-85c6-de57c6db7c01"/>
+                  <status>normal</status>
+                  <statusEpoch>1279071044</statusEpoch>
+                  <vendorStatus>Ok</vendorStatus>
+                  <vendorState>Ready</vendorState>
+                  <size>159450660864</size>
+                  <vendor>DELL</vendor>
+                  <model>WDC WD1602ABKS-18N8A0</model>
+                  <firmwareRev>02.03B04</firmwareRev>
+                  <serialNumber>WD-WCAT2603666936669</serialNumber>
+                  <spare>none</spare>
+                </PhysicalDisk>
+              </DiskSlot>
+              <DiskSlot id="29261944-350d-486a-9b27-271d1b96ca28">
+                <name>2</name>
+                <PhysicalDisk id="015ad040-3176-4910-890c-abe633d91f94">
+                  <name>WD-WCAT2602876328763</name>
+                  <logicalDisk ref="4fa476f4-4332-44d9-8136-52a1e254d3f7"/>
+                  <controller ref="0eaae050-698b-40d4-85c6-de57c6db7c01"/>
+                  <status>normal</status>
+                  <statusEpoch>1279071044</statusEpoch>
+                  <vendorStatus>Ok</vendorStatus>
+                  <vendorState>Ready</vendorState>
+                  <size>159450660864</size>
+                  <vendor>DELL</vendor>
+                  <model>WDC WD1602ABKS-18N8A0</model>
+                  <firmwareRev>02.03B04</firmwareRev>
+                  <serialNumber>WD-WCAT2602876328763</serialNumber>
+                  <spare>none</spare>
+                </PhysicalDisk>
+              </DiskSlot>
+              <DiskSlot id="1da0a1a7-46ed-49ed-85ff-4c3afc1dbe1d">
+                <name>3</name>
+                <PhysicalDisk id="71d81fdc-9399-4177-92cb-e6097ddce739">
+                  <name>WD-WCAT2603984839848</name>
+                  <logicalDisk ref="9d4bf7cd-f94b-4619-84c9-d62193d040b5"/>
+                  <controller ref="0eaae050-698b-40d4-85c6-de57c6db7c01"/>
+                  <status>normal</status>
+                  <statusEpoch>1279071044</statusEpoch>
+                  <vendorStatus>Ok</vendorStatus>
+                  <vendorState>Ready</vendorState>
+                  <size>159450660864</size>
+                  <vendor>DELL</vendor>
+                  <model>WDC WD1602ABKS-18N8A0</model>
+                  <firmwareRev>02.03B04</firmwareRev>
+                  <serialNumber>WD-WCAT2603984839848</serialNumber>
+                  <spare>none</spare>
+                </PhysicalDisk>
+              </DiskSlot>
+            </DiskSlots>
+          </Enclosure>
+        </Enclosures>
+      </StorageDevices>
+      <Storage>
+        <StorageElement id="34304a72-2149-4120-a8a4-9a3dbff3f07c">
+          <name>StorageElement-0002</name>
+          <carvable>false</carvable>
+          <attachable>false</attachable>
+          <writable>false</writable>
+          <logicalDisk ref="4fa476f4-4332-44d9-8136-52a1e254d3f7"/>
+          <size>160000000000</size>
+          <capacity unit="MB">152587</capacity>
+          <usedSize>4079616</usedSize>
+          <remainingSize>159995920384</remainingSize>
+          <available unit="MB">152584</available>
+          <VolumeElements/>
+        </StorageElement>
+        <StorageElement id="13be1ef6-7530-447c-998d-98fba64057ca">
+          <name>StorageElement-0001</name>
+          <carvable>false</carvable>
+          <attachable>false</attachable>
+          <writable>false</writable>
+          <logicalDisk ref="179ad5a8-ab00-4247-850f-cccf9379e6ba"/>
+          <size>160000000000</size>
+          <capacity unit="MB">152587</capacity>
+          <usedSize>4079616</usedSize>
+          <remainingSize>159995920384</remainingSize>
+          <available unit="MB">152584</available>
+          <VolumeElements/>
+        </StorageElement>
+        <StorageElement id="915aa462-e475-490c-81bd-92c7dd51de67">
+          <name>StorageElement-0003</name>
+          <carvable>false</carvable>
+          <attachable>false</attachable>
+          <writable>false</writable>
+          <logicalDisk ref="9d4bf7cd-f94b-4619-84c9-d62193d040b5"/>
+          <size>160000000000</size>
+          <capacity unit="MB">152587</capacity>
+          <usedSize>12884787200</usedSize>
+          <remainingSize>147115212800</remainingSize>
+          <available unit="MB">140300</available>
+          <VolumeElements>
+            <VolumeElement id="1079efc6-75fa-409b-95eb-5712b5d3c7ff">
+              <name>9d4bf7cd-f94b-4619-84c9-d62193d040b5-part1</name>
+              <carvable>false</carvable>
+              <attachable>false</attachable>
+              <writable>false</writable>
+              <size>20964762</size>
+              <capacity unit="MB">19</capacity>
+              <replicationStatus>normal</replicationStatus>
+              <replicationStatusEpoch>1279135634036</replicationStatusEpoch>
+            </VolumeElement>
+            <VolumeElement id="4612aa3b-db66-49b0-a4b0-80bf02f7e864">
+              <name>9d4bf7cd-f94b-4619-84c9-d62193d040b5-part2</name>
+              <carvable>false</carvable>
+              <attachable>false</attachable>
+              <writable>false</writable>
+              <size>4192965</size>
+              <capacity unit="MB">3</capacity>
+              <replicationStatus>normal</replicationStatus>
+              <replicationStatusEpoch>1279135634439</replicationStatusEpoch>
+            </VolumeElement>
+          </VolumeElements>
+        </StorageElement>
+        <StorageElement id="5eadd6f9-0c7c-4c53-b74d-6ec04218d51c">
+          <name>StorageElement-0000</name>
+          <carvable>false</carvable>
+          <attachable>false</attachable>
+          <writable>false</writable>
+          <logicalDisk ref="b193dc35-2402-437c-a8b9-2bf848a967c7"/>
+          <size>160000000000</size>
+          <capacity unit="MB">152587</capacity>
+          <usedSize>12884787200</usedSize>
+          <remainingSize>145773035520</remainingSize>
+          <available unit="MB">139020</available>
+          <VolumeElements>
+            <VolumeElement id="db3afa29-eb74-40b9-9d5e-a1f417130127">
+              <name>region.ade88ef7-1432-403b-871b-b1e0a38d719c</name>
+              <carvable>false</carvable>
+              <attachable>false</attachable>
+              <writable>false</writable>
+              <size>268435456</size>
+              <capacity unit="MB">256</capacity>
+              <replicationStatus>normal</replicationStatus>
+              <replicationStatusEpoch>1279135653185</replicationStatusEpoch>
+            </VolumeElement>
+            <VolumeElement id="1b8ad850-28aa-4137-b669-a0fb23204a1b">
+              <name>b193dc35-2402-437c-a8b9-2bf848a967c7-part2</name>
+              <carvable>false</carvable>
+              <attachable>false</attachable>
+              <writable>false</writable>
+              <size>4192965</size>
+              <capacity unit="MB">3</capacity>
+              <replicationStatus>normal</replicationStatus>
+              <replicationStatusEpoch>1279135634197</replicationStatusEpoch>
+            </VolumeElement>
+            <VolumeElement id="9c2e08fa-8297-467a-9289-50be2c2cae75">
+              <name>b193dc35-2402-437c-a8b9-2bf848a967c7-part1</name>
+              <carvable>false</carvable>
+              <attachable>false</attachable>
+              <writable>false</writable>
+              <size>20964762</size>
+              <capacity unit="MB">19</capacity>
+              <replicationStatus>normal</replicationStatus>
+              <replicationStatusEpoch>1279135634265</replicationStatusEpoch>
+            </VolumeElement>
+            <VolumeElement id="743c4daa-b4e9-4360-ade0-f59cdc9dbe99">
+              <name>region.0d421547-99ae-4ba7-9c95-abf955447825</name>
+              <carvable>false</carvable>
+              <attachable>false</attachable>
+              <writable>false</writable>
+              <size>1073741824</size>
+              <capacity unit="MB">1024</capacity>
+              <replicationStatus>normal</replicationStatus>
+              <replicationStatusEpoch>1279135686343</replicationStatusEpoch>
+            </VolumeElement>
+          </VolumeElements>
+        </StorageElement>
+        <PrivateStorage id="7840840e-eca2-4d97-a479-e05b801ea50a">
+          <name>md1</name>
+          <carvable>false</carvable>
+          <attachable>false</attachable>
+          <writable>false</writable>
+          <size>4192768</size>
+          <capacity unit="MB">3</capacity>
+          <replicationStatus>normal</replicationStatus>
+          <replicationProgress>0</replicationProgress>
+          <storage>
+            <VolumeElement ref="1b8ad850-28aa-4137-b669-a0fb23204a1b"/>
+            <VolumeElement ref="4612aa3b-db66-49b0-a4b0-80bf02f7e864"/>
+          </storage>
+        </PrivateStorage>
+        <PrivateStorage id="7bb0dbd8-34bb-4e62-a3d4-0b8fab0a78b1">
+          <name>md0</name>
+          <carvable>false</carvable>
+          <attachable>false</attachable>
+          <writable>false</writable>
+          <size>20964608</size>
+          <capacity unit="MB">19</capacity>
+          <replicationStatus>normal</replicationStatus>
+          <replicationProgress>0</replicationProgress>
+          <storage>
+            <VolumeElement ref="1079efc6-75fa-409b-95eb-5712b5d3c7ff"/>
+            <VolumeElement ref="9c2e08fa-8297-467a-9289-50be2c2cae75"/>
+          </storage>
+        </PrivateStorage>
+      </Storage>
+    </system>
+  </systems>
+  <storage>
+    <region id="ade88ef7-1432-403b-871b-b1e0a38d719c">
+      <name>xen-win-pv-drivers-5.5.0</name>
+      <state>ready</state>
+      <carvable>false</carvable>
+      <attachable>true</attachable>
+      <status>normal</status>
+      <writable>false</writable>
+      <size>268435456</size>
+      <storage>
+        <VolumeElement ref="1c131d0e-2092-4b13-ba54-0134040a3d1b"/>
+        <region ref="1c131d0e-2092-4b13-ba54-0134040a3d1b"/>
+        <VolumeElement ref="db3afa29-eb74-40b9-9d5e-a1f417130127"/>
+        <region ref="db3afa29-eb74-40b9-9d5e-a1f417130127"/>
+      </storage>
+      <mirror ref="0ae36922-5f7a-4784-a3b8-2f1936a23a30"/>
+      <device>
+        <path>/dev/drbd16</path>
+      </device>
+      <replicationStatus>normal</replicationStatus>
+      <replicationProgress>0</replicationProgress>
+      <media_info>
+        <bootable>false</bootable>
+        <volumeId>xen-win-pv-drivers-5.5.0</volumeId>
+      </media_info>
+      <loader>
+        <size unit="B">1675264</size>
+        <progress unit="percent">100</progress>
+      </loader>
+    </region>
+    <mirror id="c18f3ed4-81ee-4946-bb39-3180b7e00fb3">
+      <name>shared-mirror-0003</name>
+      <state>ready</state>
+      <carvable>true</carvable>
+      <attachable>false</attachable>
+      <status>normal</status>
+      <writable>true</writable>
+      <capacity unit="MB">152587</capacity>
+      <size>160000000000</size>
+      <usedSize>12884787200</usedSize>
+      <remainingSize>147115212800</remainingSize>
+      <available unit="MB">140288</available>
+      <storage>
+        <StorageElement ref="a9c9eaf0-4774-4a7d-bf8e-84bfa0ca2901"/>
+        <plex ref="a9c9eaf0-4774-4a7d-bf8e-84bfa0ca2901"/>
+        <StorageElement ref="915aa462-e475-490c-81bd-92c7dd51de67"/>
+        <plex ref="915aa462-e475-490c-81bd-92c7dd51de67"/>
+      </storage>
+    </mirror>
+    <mirror id="8ae26b26-09d2-48e5-8857-38edf6f62a01">
+      <name>shared-mirror-0002</name>
+      <state>ready</state>
+      <carvable>true</carvable>
+      <attachable>false</attachable>
+      <status>normal</status>
+      <writable>true</writable>
+      <capacity unit="MB">152587</capacity>
+      <size>160000000000</size>
+      <usedSize>4079616</usedSize>
+      <remainingSize>159995920384</remainingSize>
+      <available unit="MB">152576</available>
+      <storage>
+        <StorageElement ref="d0969008-1840-44f3-8969-b008883c2407"/>
+        <plex ref="d0969008-1840-44f3-8969-b008883c2407"/>
+        <StorageElement ref="34304a72-2149-4120-a8a4-9a3dbff3f07c"/>
+        <plex ref="34304a72-2149-4120-a8a4-9a3dbff3f07c"/>
+      </storage>
+    </mirror>
+    <mirror id="0ae36922-5f7a-4784-a3b8-2f1936a23a30">
+      <name>shared-mirror-0000</name>
+      <state>ready</state>
+      <carvable>true</carvable>
+      <attachable>false</attachable>
+      <status>normal</status>
+      <writable>true</writable>
+      <capacity unit="MB">152587</capacity>
+      <size>160000000000</size>
+      <usedSize>14226964480</usedSize>
+      <remainingSize>145773035520</remainingSize>
+      <available unit="MB">139008</available>
+      <storage>
+        <StorageElement ref="fea4a057-6948-4b03-a50d-2ce4247c91dc"/>
+        <plex ref="fea4a057-6948-4b03-a50d-2ce4247c91dc"/>
+        <StorageElement ref="5eadd6f9-0c7c-4c53-b74d-6ec04218d51c"/>
+        <plex ref="5eadd6f9-0c7c-4c53-b74d-6ec04218d51c"/>
+      </storage>
+    </mirror>
+    <region id="0d421547-99ae-4ba7-9c95-abf955447825">
+      <name>shared.fs</name>
+      <state>ready</state>
+      <carvable>false</carvable>
+      <attachable>true</attachable>
+      <status>normal</status>
+      <writable>true</writable>
+      <capacity unit="MB">1024</capacity>
+      <size>1073741824</size>
+      <storage>
+        <VolumeElement ref="ab28114a-fa87-41bb-8c53-8bf61b4a4498"/>
+        <region ref="ab28114a-fa87-41bb-8c53-8bf61b4a4498"/>
+        <VolumeElement ref="743c4daa-b4e9-4360-ade0-f59cdc9dbe99"/>
+        <region ref="743c4daa-b4e9-4360-ade0-f59cdc9dbe99"/>
+      </storage>
+      <mirror ref="0ae36922-5f7a-4784-a3b8-2f1936a23a30"/>
+      <device>
+        <path>/dev/drbd5</path>
+      </device>
+      <replicationStatus>normal</replicationStatus>
+      <replicationProgress>0</replicationProgress>
+    </region>
+    <mirror id="3763cc7a-488a-4fac-bacf-0d398a9b4b46">
+      <name>shared-mirror-0001</name>
+      <state>ready</state>
+      <carvable>true</carvable>
+      <attachable>false</attachable>
+      <status>normal</status>
+      <writable>true</writable>
+      <capacity unit="MB">152587</capacity>
+      <size>160000000000</size>
+      <usedSize>4079616</usedSize>
+      <remainingSize>159995920384</remainingSize>
+      <available unit="MB">152576</available>
+      <storage>
+        <StorageElement ref="c16edf93-35fc-4ae0-aebd-dc4b0aecc5db"/>
+        <plex ref="c16edf93-35fc-4ae0-aebd-dc4b0aecc5db"/>
+        <StorageElement ref="13be1ef6-7530-447c-998d-98fba64057ca"/>
+        <plex ref="13be1ef6-7530-447c-998d-98fba64057ca"/>
+      </storage>
+    </mirror>
+  </storage>
+  <networks>
+    <network id="8de59cb2-8768-4d91-824b-ee09fc2574ae">
+      <name>priv0</name>
+      <access>private</access>
+      <provides>
+        <power/><pxe/><internal/><sync-disk/><sync-memory/>
+      </provides>
+      <address family="ipv4" prefix="16">169.254.0.0</address>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <networks>
+        <interface ref="f98a96d2-b937-43aa-a932-14a1b13d8cbe"/>
+        <interface ref="cf6b1477-75f1-4557-80a3-18ec6329af8e"/>
+      </networks>
+    </network>
+    <network id="0130688f-2b2e-491d-a352-32d7cf5dc083">
+      <name>network0</name>
+      <access>business</access>
+      <provides>
+        <vm/><portal/>
+      </provides>
+      <address family="ipv4" prefix="0.0.0.0">0.0.0.0</address>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <networks>
+        <interface ref="20c9c194-8e11-4684-8985-05921ce065b6"/>
+        <interface ref="e54f0ac8-c783-412e-8d6d-3386476e0d2a"/>
+      </networks>
+    </network>
+    <network id="1d5691a5-d0eb-48c8-b13d-ce4c124acf1d">
+      <name>network1</name>
+      <access>business</access>
+      <provides>
+        <vm/>
+      </provides>
+      <address family="ipv4" prefix="0.0.0.0">0.0.0.0</address>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <networks>
+        <interface ref="9fb5bda8-ec26-4e89-ae04-cae55f83b773"/>
+        <interface ref="4a6009cb-1148-482d-80c1-2fc128379b81"/>
+      </networks>
+    </network>
+    <network id="0a1c9a3b-3161-4220-9ade-b9ab5a3380ed">
+      <name>network2</name>
+      <access>business</access>
+      <provides>
+        <vm/>
+      </provides>
+      <address family="ipv4" prefix="0.0.0.0">0.0.0.0</address>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <networks>
+        <interface ref="92826490-8b61-48bf-bd56-2222f7bc77ef"/>
+        <interface ref="20cb218b-df5d-4649-8140-5282acd28f9d"/>
+      </networks>
+    </network>
+  </networks>
+  <guests/>
+  <debug private="true">
+    <hoard_refreshes>1145</hoard_refreshes>
+    <topo_duration>1.091871</topo_duration>
+  </debug>
+</cluster>

@@ -1,0 +1,109 @@
+<config>
+  <lan id="98d7f623-b58e-4947-8ca0-d1f264b385e9">
+    <address>normal</address>
+  </lan>
+  <lan id="0f57921d-f0c4-483b-8a96-e517d02f84cb">
+    <address>normal</address>
+  </lan>
+  <node0>
+    <card id="acdf7012-b6e3-445c-bd89-a107fb52e63c">
+      <status>normal</status>
+      <vendor>Broadcom Corporation</vendor>
+      <model>Foo Gigabit Ethernet</model>
+    </card>
+    <port id="14d98a0f-273b-4ce6-aaf5-41d98620c7e3">
+      <status>normal</status>
+      <kind>network</kind>
+      <mtu>1500</mtu>
+      <slotno>5</slotno>
+      <portno>1</portno>
+      <device>eth_s5_1</device>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <card ref="acdf7012-b6e3-445c-bd89-a107fb52e63c"/>
+    </port>
+    <interface id="bf5a1490-cd28-4647-beb3-0fa6515c897d">
+      <name>eth_s5_1</name>
+      <access>business</access>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <connectivity>good</connectivity>
+      <device ref="14d98a0f-273b-4ce6-aaf5-41d98620c7e3"/>
+      <lan ref="98d7f623-b58e-4947-8ca0-d1f264b385e9"/>
+    </interface>
+  </node0>
+  <node1>
+    <card id="2ab34e07-f61c-4b95-927a-8d3f40e651c2">
+      <status>normal</status>
+      <vendor>Intel Corporation</vendor>
+      <model>Foo Gigabit Ethernet</model>
+    </card>
+    <port id="9be0d87a-34f5-4219-86cb-0de8a3f7421c">
+      <status>normal</status>
+      <kind>network</kind>
+      <mtu>1500</mtu>
+      <slotno>5</slotno>
+      <portno>0</portno>
+      <device>eth_s5_0</device>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <card ref="2ab34e07-f61c-4b95-927a-8d3f40e651c2"/>
+    </port>
+    <interface id="65b9d03e-a518-4724-9f6c-edb970a35412">
+      <name>eth_s5_0</name>
+      <access>business</access>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <connectivity>good</connectivity>
+      <device ref="9be0d87a-34f5-4219-86cb-0de8a3f7421c"/>
+      <lan ref="98d7f623-b58e-4947-8ca0-d1f264b385e9"/>
+    </interface>
+  </node1>
+
+  <node0>
+    <card id="369a1e57-d402-48fb-939c-a612e5748dc3">
+      <status>normal</status>
+      <vendor>Stratus Avance</vendor>
+      <model>Foo Gigabit Ethernet</model>
+    </card>
+    <port id="fb09efa6-1c23-47d5-a49b-8ca70ed6f132">
+      <status>normal</status>
+      <kind>network</kind>
+      <mtu>1500</mtu>
+      <slotno>5</slotno>
+      <portno>0</portno>
+      <device>eth_s5_0</device>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <card ref="369a1e57-d402-48fb-939c-a612e5748dc3"/>
+    </port>
+    <interface id="5940b87a-dc6e-4f31-9259-0b748dafce16">
+      <name>eth_s5_0</name>
+      <access>business</access>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <connectivity>good</connectivity>
+      <device ref="fb09efa6-1c23-47d5-a49b-8ca70ed6f132"/>
+      <lan ref="0f57921d-f0c4-483b-8a96-e517d02f84cb"/>
+    </interface>
+  </node0>
+  <node1>
+    <card id="325987a0-4dbc-4f29-b1e5-84a6bd37c0e5">
+      <status>normal</status>
+      <vendor>Intel Corporation</vendor>
+      <model>Foo Gigabit Ethernet</model>
+    </card>
+    <port id="2198f4dc-6ab3-4067-89e2-850df1743c9a">
+      <status>normal</status>
+      <kind>network</kind>
+      <mtu>1500</mtu>
+      <slotno>5</slotno>
+      <portno>1</portno>
+      <device>eth_s5_1</device>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <card ref="325987a0-4dbc-4f29-b1e5-84a6bd37c0e5"/>
+    </port>
+    <interface id="8be26d41-0f59-437c-98de-ab162435df90">
+      <name>eth_s5_1</name>
+      <access>business</access>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <connectivity>good</connectivity>
+      <device ref="2198f4dc-6ab3-4067-89e2-850df1743c9a"/>
+      <lan ref="0f57921d-f0c4-483b-8a96-e517d02f84cb"/>
+    </interface>
+  </node1>
+</config>

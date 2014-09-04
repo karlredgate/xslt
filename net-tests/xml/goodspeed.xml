@@ -1,0 +1,55 @@
+<config>
+  <lan id="aec61308-95fb-47dc-be21-4a506938cf7b">
+    <address>normal</address>
+  </lan>
+  <node0>
+    <card id="ed624135-adf0-489e-8c7b-64d23a581f04">
+      <status>normal</status>
+      <vendor>Broadcom Corporation</vendor>
+      <model>Foo Gigabit Ethernet</model>
+    </card>
+    <port id="7ed9b6ca-21f5-4387-a40d-ecb696a5281f">
+      <status>normal</status>
+      <kind>network</kind>
+      <mtu>1500</mtu>
+      <slotno>4</slotno>
+      <portno>1</portno>
+      <device>eth_s4_1</device>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <card ref="ed624135-adf0-489e-8c7b-64d23a581f04"/>
+    </port>
+    <interface id="d0743ceb-9526-44a8-91f7-d093cfbe6542">
+      <name>eth_s4_1</name>
+      <access>business</access>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <connectivity>good</connectivity>
+      <device ref="7ed9b6ca-21f5-4387-a40d-ecb696a5281f"/>
+      <lan ref="aec61308-95fb-47dc-be21-4a506938cf7b"/>
+    </interface>
+  </node0>
+  <node1>
+    <card id="a8179df0-b6e3-4c25-a974-a861fd05eb3c">
+      <status>normal</status>
+      <vendor>Intel Corporation</vendor>
+      <model>Foo Gigabit Ethernet</model>
+    </card>
+    <port id="264789fa-1d05-4234-becb-d769831f4a0b">
+      <status>normal</status>
+      <kind>network</kind>
+      <mtu>1500</mtu>
+      <slotno>4</slotno>
+      <portno>1</portno>
+      <device>eth_s4_1</device>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <card ref="a8179df0-b6e3-4c25-a974-a861fd05eb3c"/>
+    </port>
+    <interface id="2c586ed3-7912-4a04-8fb8-5cd613eaf597">
+      <name>eth_s4_1</name>
+      <access>business</access>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <connectivity>good</connectivity>
+      <device ref="264789fa-1d05-4234-becb-d769831f4a0b"/>
+      <lan ref="aec61308-95fb-47dc-be21-4a506938cf7b"/>
+    </interface>
+  </node1>
+</config>

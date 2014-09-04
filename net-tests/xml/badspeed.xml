@@ -1,0 +1,52 @@
+<config>
+  <node0>
+    <card id="a510deb2-9478-4316-aac5-0dfbe9273861">
+      <status>normal</status>
+      <vendor>Intel Corporation</vendor>
+      <model>Foo Gigabit Ethernet</model>
+    </card>
+    <port id="4becafd5-0813-4962-bf70-cb4e15ad389f">
+      <status>normal</status>
+      <kind>network</kind>
+      <mtu>1500</mtu>
+      <slotno>4</slotno>
+      <portno>0</portno>
+      <device>eth_s4_0</device>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <card ref="a510deb2-9478-4316-aac5-0dfbe9273861"/>
+    </port>
+    <interface id="406251c7-bea0-4d89-936f-5c2741bd0ea9">
+      <name>eth_s4_0</name>
+      <access>business</access>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <connectivity>good</connectivity>
+      <device ref="4becafd5-0813-4962-bf70-cb4e15ad389f"/>
+      <lan ref="2ac78963-7b04-41fc-85da-2e089b4763cf"/>
+    </interface>
+  </node0>
+  <node1>
+    <card id="3f5876c2-140d-43be-aa97-658fc442109d">
+      <status>normal</status>
+      <vendor>Stratus Avance</vendor>
+      <model>Foo Gigabit Ethernet</model>
+    </card>
+    <port id="b3ae7685-fc47-49d2-9a01-b53e67f89ca4">
+      <status>normal</status>
+      <kind>network</kind>
+      <mtu>1500</mtu>
+      <slotno>4</slotno>
+      <portno>0</portno>
+      <device>eth_s4_0</device>
+      <bandwidth duplex="full" unit="Mb/s">10000</bandwidth>
+      <card ref="3f5876c2-140d-43be-aa97-658fc442109d"/>
+    </port>
+    <interface id="d1b082f3-756e-419a-b0c8-d42b3f17365e">
+      <name>eth_s4_0</name>
+      <access>business</access>
+      <bandwidth duplex="full" unit="Mb/s">10000</bandwidth>
+      <connectivity>good</connectivity>
+      <device ref="b3ae7685-fc47-49d2-9a01-b53e67f89ca4"/>
+      <lan ref="2ac78963-7b04-41fc-85da-2e089b4763cf"/>
+    </interface>
+  </node1>
+</config>

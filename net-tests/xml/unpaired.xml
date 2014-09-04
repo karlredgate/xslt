@@ -1,0 +1,50 @@
+<config>
+  <node0>
+    <card id="571230b9-6cde-44af-8815-b732e90cd641">
+      <status>normal</status>
+      <vendor>Stratus Avance</vendor>
+      <model>Foo Gigabit Ethernet</model>
+    </card>
+    <port id="fa85270b-e9c3-4d64-bf10-8ae5b2793c64">
+      <status>normal</status>
+      <kind>network</kind>
+      <mtu>1500</mtu>
+      <slotno>8</slotno>
+      <portno>0</portno>
+      <device>eth_s8_0</device>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <card ref="571230b9-6cde-44af-8815-b732e90cd641"/>
+    </port>
+    <interface id="dfa015be-827c-4940-a36d-5af21e8b0974">
+      <name>eth_s8_0</name>
+      <access>business</access>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <connectivity>good</connectivity>
+      <device ref="fa85270b-e9c3-4d64-bf10-8ae5b2793c64"/>
+    </interface>
+  </node0>
+  <node1>
+    <card id="c36fd2a1-758b-4e09-bc43-6dfa2158793b">
+      <status>normal</status>
+      <vendor>Broadcom Corporation</vendor>
+      <model>Foo Gigabit Ethernet</model>
+    </card>
+    <port id="ce01f4da-2673-4859-9cb1-0e42d7f6a893">
+      <status>normal</status>
+      <kind>network</kind>
+      <mtu>1500</mtu>
+      <slotno>8</slotno>
+      <portno>0</portno>
+      <device>eth_s8_0</device>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <card ref="c36fd2a1-758b-4e09-bc43-6dfa2158793b"/>
+    </port>
+    <interface id="51bc04ed-f27a-469b-b318-5fce0d46a2f7">
+      <name>eth_s8_0</name>
+      <access>business</access>
+      <bandwidth duplex="full" unit="Mb/s">1000</bandwidth>
+      <connectivity>good</connectivity>
+      <device ref="ce01f4da-2673-4859-9cb1-0e42d7f6a893"/>
+    </interface>
+  </node1>
+</config>
