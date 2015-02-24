@@ -22,6 +22,16 @@
   <xsl:namespace-alias stylesheet-prefix="rdf" result-prefix="rdf" />
 
   <dc:description>
+      The propfind element wraps the query types.  This is translated to
+      the transform element of the generated stylesheet.  The general
+      templates are added here also - since they do not change based on
+      the query type.
+
+      Since this is a stylesheet that generates a stylesheet, the target
+      elements have the same name as templates that would be recognized as
+      first pass templates.  So, the must be created using the
+      xsl:element elements to "escape" them.
+
       The rdf:about attribute here is used to force the rdf namespace
       declaration into the result document.  If we do not do this then
       the template that matches rdf:RDF elements fail.
@@ -71,6 +81,29 @@
               </xsl:element>
           </xsl:element>
       </xsl:for-each>
+  </xsl:template>
+
+  <dc:description>
+  </dc:description>
+  <xsl:template match="D:allprop" >
+      <xsl:element name="xsl:template">
+          <xsl:attribute name="match">
+              <xsl:text>rdf:RDF/*/*</xsl:text>
+          </xsl:attribute>
+          <xsl:element name="xsl:copy-of">
+              <xsl:attribute name="select">.</xsl:attribute>
+          </xsl:element>
+      </xsl:element>
+  </xsl:template>
+
+  <dc:description>
+  </dc:description>
+  <xsl:template match="D:propname" >
+  </xsl:template>
+
+  <dc:description>
+  </dc:description>
+  <xsl:template match="D:include" >
   </xsl:template>
 
 </xsl:transform>
