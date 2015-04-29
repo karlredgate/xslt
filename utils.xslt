@@ -102,7 +102,4 @@ belong in the specific stylesheets.
   </xsl:template>
 
 </xsl:stylesheet>
-<!--
-  vim:autoindent
-  vim:expandtab
-  -->
+<!-- vim: set autoindent expandtab sw=4 syntax=xslt: -->

@@ -44,7 +44,4 @@ successfully used by the test infrastructure.
   </sch:pattern>
 
 </sch:schema>
-<!--
-  vim:autoindent
-  vim:expandtab
-  -->
+<!-- vim: set autoindent expandtab sw=4 syntax=xslt: -->

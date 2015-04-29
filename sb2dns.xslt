@@ -717,8 +717,4 @@ address to a global IPv6 address using EUI64 for the specific interface.
   </xsl:template>
 
 </xsl:stylesheet>
-<!--
-  vim:autoindent
-  vim:expandtab
-  vim:syntax=plain
-  -->
+<!-- vim: set autoindent expandtab sw=4 syntax=xslt: -->

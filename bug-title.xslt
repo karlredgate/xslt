@@ -18,3 +18,4 @@
   </xsl:template>
 
 </xsl:stylesheet>
+<!-- vim: set autoindent expandtab sw=4 syntax=xslt: -->

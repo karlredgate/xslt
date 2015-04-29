@@ -333,8 +333,4 @@ The 10.XX addresses get translated to their top two octets, like "1080" and "108
   </xsl:template>
 
 </xsl:stylesheet>
-<!--
-  vim:autoindent
-  vim:expandtab
-  vim:syntax=plain
-  -->
+<!-- vim: set autoindent expandtab sw=4 syntax=xslt: -->

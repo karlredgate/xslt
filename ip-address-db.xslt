@@ -32,7 +32,4 @@ file of the hostname, IPv4 address, and MAC address.
   </xsl:template>
 
 </xsl:stylesheet>
-<!--
-  vim:autoindent
-  vim:expandtab
-  -->
+<!-- vim: set autoindent expandtab sw=4 syntax=xslt: -->

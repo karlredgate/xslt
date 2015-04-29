@@ -84,7 +84,4 @@ the output file.  The <quote>href</quote> attribute generates the filename.
   </xsl:template>
 
 </xsl:stylesheet>
-<!--
-  vim:autoindent
-  vim:expandtab
-  -->
+<!-- vim: set autoindent expandtab sw=4 syntax=xslt: -->

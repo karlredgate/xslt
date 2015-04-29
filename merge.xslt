@@ -282,3 +282,4 @@
 <xslt:template match="processing-instruction()" mode="m:detect-type">pi</xslt:template>
 
 </xslt:transform>
+<!-- vim: set autoindent expandtab sw=4 syntax=xslt: -->
