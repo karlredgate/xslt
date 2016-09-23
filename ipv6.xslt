@@ -1,8 +1,8 @@
 <?xml version='1.0' ?>
 <xsl:stylesheet xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
                 xmlns:fn='http://www.w3.org/2005/02/xpath-functions'
-                xmlns:xs='http://www.w3.org/2001/XSL/XMLSchema'
-                xmlns:xsi='http://www.w3.org/2001/XSL/XMLSchema-instance'
+                xmlns:xs='http://www.w3.org/2001/XMLSchema'
+                xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
                 xmlns:exslt="http://exslt.org/common"
                 xmlns:dc="http://purl.org/dc/elements/1.1/"
                 xmlns:IPv6='http://redgates.com/xslt/IPv6'
