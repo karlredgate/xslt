@@ -22,26 +22,19 @@
         of the actual data.
     </dc:description>
   <xsl:template match='/html/head/meta'></xsl:template>
+
+    <dc:description>Get rid of any Javascript</dc:description>
   <xsl:template match='/html/head/script'></xsl:template>
-  <xsl:template match='/html/head/link'></xsl:template>
   <xsl:template match='/html/body//script'></xsl:template>
+
+    <dc:description>Get rid of any CSS links and styles</dc:description>
+  <xsl:template match='/html/head/link'></xsl:template>
+  <xsl:template match='/html/head/style'></xsl:template>
 
     <dc:description>
         Eliminate semantic "nav" elements
     </dc:description>
-  <xsl:template match='/html/body//nav'></xsl:template>
-
-    <dc:description>
-        Remove attributes that are mostly used for Javascript and
-        CSS formatting.
-    </dc:description>
-  <xsl:template match='@onload'></xsl:template>
-  <xsl:template match='@class'></xsl:template>
-  <xsl:template match='@id'></xsl:template>
-  <xsl:template match='@role'></xsl:template>
-  <xsl:template match='@colspan[. = "1"]'></xsl:template>
-
-  <xsl:template match='@talk-marker'></xsl:template>
+  <xsl:template mode="disabled" match='/html/body//nav'></xsl:template>
 
     <dc:description>
         Remove structural elements that have no children.
@@ -52,11 +45,36 @@
   <xsl:template match='li[count(child::text()) = 0 and count(*) = 0]'></xsl:template>
 
     <dc:description>
-        Remove wrapper divs that have only one child.
+        Get rid of navigation anchors and divs.  MediaWiki navigation starts
+        with "mw-".
+        Also, get rid of breadcrumb divs
     </dc:description>
+  <xsl:template match='a[@data-container = "#navigation"]'></xsl:template>
+  <xsl:template match='div[@id = "navigation"]'></xsl:template>
+  <xsl:template match='div[@id = "mw-navigation"]'></xsl:template>
+  <xsl:template match='div[@id = "breadcrumb-section"]'></xsl:template>
+
+    <dc:description>
+        Get rid of hidden fieldsets.
+    </dc:description>
+  <xsl:template match='fieldset[contains(@class,"hidden")]'></xsl:template>
+
+    <dc:description>
+        Get rid of MS aria navigation, menus and contentinfo.
+    </dc:description>
+  <xsl:template match='*[@role = "navigation"]'></xsl:template>
+  <xsl:template match='*[@role = "menu"]'></xsl:template>
+  <xsl:template match='*[@role = "contentinfo"]'></xsl:template>
+
+    <dc:description>
+        Remove wrapper divs that have only one child.
+        This one is more specific that the role one - so it overrides it ?!?
+    </dc:description>
+<!--
   <xsl:template match='div[count(*) = 1]'>
     <xsl:apply-templates select='*'/>
   </xsl:template>
+-->
 
     <dc:description>
         Add a border to tables.
@@ -69,6 +87,21 @@
     <xsl:apply-templates select='@*|node()'/>
    </xsl:copy>
   </xsl:template>
+
+    <dc:description>
+        Remove attributes that are mostly used for Javascript and
+        CSS formatting.
+    </dc:description>
+  <xsl:template match='@onload'></xsl:template>
+  <xsl:template match='@style'></xsl:template>
+  <xsl:template match='@colspan[. = "1"]'></xsl:template>
+  <!--
+  <xsl:template match='@class'></xsl:template>
+  <xsl:template match='@id'></xsl:template>
+  <xsl:template match='@role'></xsl:template>
+  -->
+
+  <xsl:template match='@talk-marker'></xsl:template>
 
     <dc:description>
         Just copy everything else.
