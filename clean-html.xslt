@@ -1,6 +1,7 @@
 <?xml version='1.0' ?>
 <xsl:stylesheet
     xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
+    xmlns:xhtml='http://www.w3.org/1999/xhtml'
     xmlns:dc='http://purl.org/dc/elements/1.1/'
     version='1.0'>
 
@@ -30,6 +31,7 @@
     <dc:description>Get rid of any CSS links and styles</dc:description>
   <xsl:template match='/html/head/link'></xsl:template>
   <xsl:template match='/html/head/style'></xsl:template>
+  <xsl:template match='/html/body/style'></xsl:template>
 
     <dc:description>
         Eliminate semantic "nav" elements
@@ -50,9 +52,17 @@
         Also, get rid of breadcrumb divs
     </dc:description>
   <xsl:template match='a[@data-container = "#navigation"]'></xsl:template>
+
   <xsl:template match='div[@id = "navigation"]'></xsl:template>
   <xsl:template match='div[@id = "mw-navigation"]'></xsl:template>
   <xsl:template match='div[@id = "breadcrumb-section"]'></xsl:template>
+  <xsl:template match='div[@id = "modal-dialog"]'></xsl:template>
+
+  <xsl:template match='div[@class = "sidebar-container"]'></xsl:template>
+  <xsl:template match='div[@class = "menu-bar"]'></xsl:template>
+  <xsl:template match='div[@class = "breadcrumb"]'></xsl:template>
+
+  <xsl:template match='ul[@class = "breadcrumb"]'></xsl:template>
 
     <dc:description>
         Get rid of hidden fieldsets.
@@ -93,6 +103,7 @@
         CSS formatting.
     </dc:description>
   <xsl:template match='@onload'></xsl:template>
+  <xsl:template match='@onclick'></xsl:template>
   <xsl:template match='@style'></xsl:template>
   <xsl:template match='@colspan[. = "1"]'></xsl:template>
   <!--
